@@ -1,3 +1,11 @@
+# file I ignore 
+bin/
+obj/
+TestResults/
+debug/
+Release/
+*dll
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -34,3 +42,11 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+TestResults/0ed78def-771a-4ab8-b823-1549b9606e0a/yuwei_YW 2014-08-14 17_11_36.coverage
+*.config
+*.coverage
+*.mdf
+*.ldf
+*.jpg
+*.settings

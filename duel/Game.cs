@@ -11,8 +11,8 @@ namespace duel
     {
         public int speakPlayer { get; set; }
 
-        CardFactory cardFactory1;
-        CardFactory cardFactory2;
+        public CardFactory cardFactory1 { get; private set; }
+        public CardFactory cardFactory2 { get; private set; }
 
         public CardManager cardManager1 { get; private set; }
         public CardManager cardManager2 { get; private set; }
@@ -29,16 +29,18 @@ namespace duel
             InitializeGame();
         }
 
+        //rule1: player1 get factoy1's cards.player2 get factoy2's cards.
+        //rule2: the amount of cards is limited.
         public void PickACard(int playerButton)
         {
 
             if (playerButton == speakPlayer)
             {
-                if (playerButton == 1 && cardManager1.cards.Count <= 4)
+                if (playerButton == 1 && cardManager1.cards.Count <= 4 && cardFactory1.cards.Count>0)
                 {
                     SendACardToManager();
                 }
-                else if (playerButton == 2 && cardManager2.cards.Count <= 4)
+                else if (playerButton == 2 && cardManager2.cards.Count <= 4 && cardFactory2.cards.Count>0)
                 {
                     SendACardToManager();
                 }

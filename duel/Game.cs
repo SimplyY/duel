@@ -20,6 +20,7 @@ namespace duel
         CardDuel cardDuel1;
         CardDuel cardDuel2;
 
+
         Player player1;
         Player player2;
 
@@ -30,9 +31,17 @@ namespace duel
 
         public void PickACard(int playerButton)
         {
+
             if (playerButton == speakPlayer)
             {
-                SendACardToManager();
+                if (playerButton == 1 && cardManager1.cards.Count <= 4)
+                {
+                    SendACardToManager();
+                }
+                else if (playerButton == 2 && cardManager2.cards.Count <= 4)
+                {
+                    SendACardToManager();
+                }
             }
         }
         public void TransformSpeakerPlayer()

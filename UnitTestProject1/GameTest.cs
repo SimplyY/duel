@@ -4,8 +4,8 @@ using System;
 
 namespace UnitTestProject1
 {
-    
-    
+
+
     /// <summary>
     ///这是 GameTest 的测试类，旨在
     ///包含所有 GameTest 单元测试
@@ -97,7 +97,7 @@ namespace UnitTestProject1
         }
 
         /// <summary>
-        ///PickACard 的测试
+        ///PickACard 的测试for player1
         ///</summary>
         [TestMethod()]
         public void PickACardTest()
@@ -105,11 +105,11 @@ namespace UnitTestProject1
             string expectedChineseName = "幼毛虫";
             int pickTimes = 2;
 
-            Game targetGame = new Game(); 
+            Game targetGame = new Game();
             int playerButton = 1;
             for (int i = 0; i < pickTimes; i++)
             {
-                targetGame.PickACard(playerButton);                
+                targetGame.PickACard(playerButton);
             }
             CardManager theManager = targetGame.cardManager1;
             Card theCard = theManager.cards[pickTimes - 1];
@@ -121,7 +121,7 @@ namespace UnitTestProject1
 
 
         /// <summary>
-        ///PickACard 的测试
+        ///PickACard 的测试for player2
         ///</summary>
         [TestMethod()]
         public void PickACardTest1()
@@ -141,6 +141,29 @@ namespace UnitTestProject1
             Card theCard = theManager.cards[pickTimes - 1];
             string actualChineseName = theCard.ChineseName;
             Assert.AreEqual(expectedChineseName, actualChineseName);
+        }
+
+        /// <summary>
+        ///PickACard 的测试for rule(max 5)
+        ///</summary>
+        [TestMethod()]
+        public void PickACardTest2()
+        {
+            const int ecpectedCardsAmount = 5;
+
+            int pickTimes = 6;
+
+            Game targetGame = new Game();
+            int playerButton = 1;
+            for (int i = 0; i < pickTimes; i++)
+            {
+                targetGame.PickACard(playerButton);
+            }
+            CardManager theManager = targetGame.cardManager1;
+            int actualCardslAmount = theManager.cards.Count;
+
+
+            Assert.AreEqual(ecpectedCardsAmount,actualCardslAmount);
         }
     }
 }

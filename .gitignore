@@ -50,3 +50,6 @@ TestResults/0ed78def-771a-4ab8-b823-1549b9606e0a/yuwei_YW 2014-08-14 17_11_36.co
 *.ldf
 *.jpg
 *.settings
+UnitTestCardFactory/Properties/AssemblyInfo.cs
+UnitTestCardFactory/UnitTest1.cs
+UnitTestCardFactory/UnitTest2.cs

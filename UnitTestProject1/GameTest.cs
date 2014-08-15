@@ -149,7 +149,7 @@ namespace UnitTestProject1
         [TestMethod()]
         public void PickACardTest2()
         {
-            int pickTimes = 11;
+            int pickTimes = -2;
             int ecpectedCardsAmount = pickTimes;
 
             Game targetGame = new Game();
@@ -158,17 +158,21 @@ namespace UnitTestProject1
             {
                 targetGame.PickACard(playerButton);
             }
-            int actualCardslAmount = -1;
+            int actualCardslAmount = 0;
             CardManager theManager = targetGame.cardManager1;
             CardFactory theFactory = targetGame.cardFactory1;
-            if (pickTimes < targetGame.cardManager1.cards.Count)
+            if (pickTimes <= 0)
+            {
+                ecpectedCardsAmount = 0;
+            }
+            else if (pickTimes < targetGame.cardManager1.cards.Count)
             {
                 actualCardslAmount = theManager.cards.Count;
             }
             else if (pickTimes > theManager.cards.Count && theFactory.cards.Count > 0)
             {
                 ecpectedCardsAmount = 5;
-                actualCardslAmount = theManager.cards.Count;     
+                actualCardslAmount = theManager.cards.Count;
             }
 
             Assert.AreEqual(ecpectedCardsAmount, actualCardslAmount);

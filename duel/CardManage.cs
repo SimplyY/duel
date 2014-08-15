@@ -8,9 +8,12 @@ namespace duel
 {
     public class CardManager
     {
+        public int numberOfManager;
         public List<Card> cards{ get;private set;}
-        public CardManager()
+
+        public CardManager(int numberOfManager)
         {
+            this.numberOfManager = numberOfManager;
             cards = new List<Card>();
         }
         public void PushACard(Card pushedCard)

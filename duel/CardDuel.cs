@@ -8,6 +8,10 @@ namespace duel
 {
     class CardDuel
     {
-        public int MyPropert { get; set; }
+        public int numberOfDuel;
+        public CardDuel(int numberOfDuel)
+        {
+            this.numberOfDuel = numberOfDuel;
+        }
     }
 }

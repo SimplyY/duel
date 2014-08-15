@@ -21,13 +21,6 @@ namespace duel
         CardDuel cardDuel2;
 
 
-        Player player1;
-        Player player2;
-
-        public Game()
-        {
-            InitializeGame();
-        }
 
         //rule1: player1 get factoy1's cards.player2 get factoy2's cards.
         //rule2: the amount of cards is limited.
@@ -46,6 +39,7 @@ namespace duel
                 }
             }
         }
+
         public void TransformSpeakerPlayer()
         {
             if (speakPlayer != 1 && speakPlayer != 2)
@@ -64,7 +58,10 @@ namespace duel
             }
         }
 
-
+        public Game()
+        {
+            InitializeGame();
+        }
         private void InitializeGame()
         {
             GameStatus.SetStatusInfo("游戏已经开始");
@@ -72,14 +69,11 @@ namespace duel
             cardFactory1 = new CardFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt");
             cardFactory2 = new CardFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt");
 
-            cardManager1 = new CardManager();
-            cardManager2 = new CardManager();
+            cardManager1 = new CardManager(1);
+            cardManager2 = new CardManager(2);
 
-            cardDuel1 = new CardDuel();
-            cardDuel2 = new CardDuel();
-
-            player1 = new Player();
-            player2 = new Player();
+            cardDuel1 = new CardDuel(1);
+            cardDuel2 = new CardDuel(2);
 
             speakPlayer = 1;
         }

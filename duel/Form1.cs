@@ -27,11 +27,29 @@ namespace duel
         private void InitGame()
         {
             timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
-            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期为1000毫秒
+            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
 
-            duelGame = new Game();
-            
+            duelGame = new Game(); 
         }
+
+        private void playerBotton1_Click(object sender, EventArgs e)
+        {
+            duelGame.PickACard(1);
+            showNewTable();
+        }
+
+        private void PlayerBotton2_Click(object sender, EventArgs e)
+        {
+            duelGame.PickACard(2);
+            showNewTable();
+        }
+
+        public void showNewTable()
+        {
+            duelGame.cardManager1.;
+        }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -78,15 +96,7 @@ namespace duel
 
         }
 
-        private void PlayerBotton2_Click(object sender, EventArgs e)
-        {
-            duelGame.PickACard(2);
-        }
 
-        private void playerBotton1_Click(object sender, EventArgs e)
-        {
-            duelGame.PickACard(1);
-        }
 
 
 

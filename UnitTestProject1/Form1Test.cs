@@ -76,5 +76,27 @@ namespace UnitTestProject1
 
 
 
+
+        /// <summary>
+        ///timer1_Tick 的测试
+        ///</summary>
+        [TestMethod()]
+        public void timer1_TickTest()
+        {
+            int expected = 20;
+
+            int times = 10;
+
+            Form1 targetForm = new Form1(); // TODO: 初始化为适当的值
+            object sender = null; // TODO: 初始化为适当的值
+            EventArgs e = null; // TODO: 初始化为适当的值
+            for (int i = 0; i < times; i++)
+            {
+                targetForm.timer1_Tick(sender, e);                
+            }
+            int actual = DuelTextBoxs.Boxs.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

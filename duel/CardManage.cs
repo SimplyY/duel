@@ -22,10 +22,16 @@ namespace duel
         }
         public void showManager()
         {
+            int boxesBeginIndex = -1;
             if (numberOfManager == 1)
             {
-                
+                boxesBeginIndex = 0;
             }
+            else if (numberOfManager == 2)
+            {
+                boxesBeginIndex = 15;
+            }
+            DuelTextBoxs.ShowTextBox(cards, boxesBeginIndex);
         }
     }
 }

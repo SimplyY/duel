@@ -22,6 +22,10 @@ namespace duel
 {
     public class Card
     {
+        public string showInfo { get; set; }
+
+        public string status { get; set; }
+
         public string cardPackage { get; set; }
         public string japanName { get; set; }
         public string ChineseName { get; set; }
@@ -32,6 +36,22 @@ namespace duel
         public string stirpt { get; set; }
         public string attack { get; set; }
         public string defend { get; set; }
+
+
+        public string makeShowInfo()
+        {
+            showInfo = "";
+            if (status != null)
+            {
+                showInfo = "状态：" + status + "\r\n";
+            }
+
+            showInfo += "怪兽名：" + ChineseName + "\r\n";
+            showInfo += "攻击力：" + attack + "\r\n";
+            showInfo += "防守力：" + defend + "\r\n";
+
+            return showInfo;
+        }
 
     }
 }

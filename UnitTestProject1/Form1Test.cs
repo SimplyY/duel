@@ -1,11 +1,12 @@
 ﻿using duel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace UnitTestProject1
 {
-    
-    
+
+
     /// <summary>
     ///这是 Form1Test 的测试类，旨在
     ///包含所有 Form1Test 单元测试
@@ -92,11 +93,86 @@ namespace UnitTestProject1
             EventArgs e = null; // TODO: 初始化为适当的值
             for (int i = 0; i < times; i++)
             {
-                targetForm.timer1_Tick(sender, e);                
+                targetForm.timer1_Tick(sender, e);
             }
-            int actual = DuelTextBoxs.Boxs.Count;
+            int actual = DuelTextBoxs.Boxes.Count;
 
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        ///showNewTable 的测试
+        ///</summary>
+        [TestMethod()]
+        public void showNewTableTest()
+        {
+            const string info1 = "怪兽名：诅咒之龙\r\n攻击力：500\r\n防守力：";
+            int info2 = 1;
+            int cardsManager1Amount = 2;
+            int cardsManager2Amount = 3;
+
+            string expectedBoxesShowInfo = "";
+            BuiltExpectedBoxesShowInfo(ref expectedBoxesShowInfo, cardsManager1Amount, info1, info2);
+            BuiltExpectedBoxesShowInfo(ref expectedBoxesShowInfo, cardsManager2Amount, info1, info2);
+
+            Form1 target = new Form1(); // TODO: 初始化为适当的值
+            CardManager cardManager1 = target.duelGame.cardManager1;
+            CardManager cardManager2 = target.duelGame.cardManager2;
+            BuiltActualCardsInfo(cardManager1, cardsManager1Amount, info1, info2);
+            BuiltActualCardsInfo(cardManager2, cardsManager2Amount, info1, info2);
+
+            target.showNewTable();
+
+            string actualBoxesShowInfo = "";
+            BuiltActualBoxesShowInfo(ref actualBoxesShowInfo, cardManager1.cards, 0);
+            BuiltActualBoxesShowInfo(ref actualBoxesShowInfo, cardManager2.cards, 15);
+
+
+            Assert.AreEqual(expectedBoxesShowInfo, actualBoxesShowInfo);
+        }
+
+        private void BuiltExpectedBoxesShowInfo(ref string expectedBoxesShowInfo, int cardsAmount, string info1, int info2)
+        {
+            for (int i = 0; i < cardsAmount; i++)
+            {
+                info2++;
+                expectedBoxesShowInfo += info1 + info2 + "\r\n";
+            }
+        }
+
+        private void BuiltActualCardsInfo(CardManager owner, int cardsAmount, string info1, int info2)
+        {
+            for (int i = 0; i < cardsAmount; i++)
+            {
+                info2++;
+                Card builtedCard = new Card();
+                builtedCard.ChineseName = "诅咒之龙";
+                builtedCard.attack = "500";
+                builtedCard.defend = Convert.ToString(info2);
+                owner.cards.Add(builtedCard);
+            }
+        }
+        private void BuiltActualCardsInfo(CardDuel owner, int cardsAmount, string info1, int info2)
+        {
+            for (int i = 0; i < cardsAmount; i++)
+            {
+                info2++;
+                Card builtedCard = new Card();
+                builtedCard.ChineseName = "诅咒之龙";
+                builtedCard.attack = "500";
+                builtedCard.defend = Convert.ToString(info2);
+                owner.cards.Add(builtedCard);
+            }
+        }
+
+        private void BuiltActualBoxesShowInfo(ref string actualBoxesShowInfo, List<Card> cards, int boxesBeginIndex)
+        {
+            for (int i = 0; i < cards.Count; i++)
+            {
+                actualBoxesShowInfo += DuelTextBoxs.Boxes[i + boxesBeginIndex].Text;
+            }
+        }
+
+
     }
 }

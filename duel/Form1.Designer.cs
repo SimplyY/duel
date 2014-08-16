@@ -82,213 +82,233 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 373);
+            this.textBox1.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox1.Location = new System.Drawing.Point(138, 374);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(103, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "无卡牌";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(244, 373);
+            this.textBox2.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox2.Location = new System.Drawing.Point(244, 374);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(103, 20);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "无卡牌";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(350, 373);
+            this.textBox3.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox3.Location = new System.Drawing.Point(350, 374);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(103, 20);
             this.textBox3.TabIndex = 2;
             this.textBox3.Text = "无卡牌";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(456, 373);
+            this.textBox4.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox4.Location = new System.Drawing.Point(456, 374);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(103, 20);
             this.textBox4.TabIndex = 3;
             this.textBox4.Text = "无卡牌";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(562, 373);
+            this.textBox5.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox5.Location = new System.Drawing.Point(562, 374);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(103, 20);
             this.textBox5.TabIndex = 4;
             this.textBox5.Text = "无卡牌";
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(148, 251);
+            this.textBox6.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox6.Location = new System.Drawing.Point(148, 250);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.Size = new System.Drawing.Size(103, 20);
             this.textBox6.TabIndex = 6;
             this.textBox6.Text = "无卡牌";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(254, 251);
+            this.textBox7.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox7.Location = new System.Drawing.Point(254, 250);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.Size = new System.Drawing.Size(103, 20);
             this.textBox7.TabIndex = 8;
             this.textBox7.Text = "无卡牌";
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(360, 251);
+            this.textBox8.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox8.Location = new System.Drawing.Point(360, 250);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.Size = new System.Drawing.Size(103, 20);
             this.textBox8.TabIndex = 10;
             this.textBox8.Text = "无卡牌";
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(466, 251);
+            this.textBox9.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox9.Location = new System.Drawing.Point(466, 250);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.Size = new System.Drawing.Size(103, 20);
             this.textBox9.TabIndex = 12;
             this.textBox9.Text = "无卡牌";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(572, 251);
+            this.textBox10.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox10.Location = new System.Drawing.Point(572, 250);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.Size = new System.Drawing.Size(103, 20);
             this.textBox10.TabIndex = 14;
             this.textBox10.Text = "无卡牌";
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(148, 163);
+            this.textBox11.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox11.Location = new System.Drawing.Point(148, 164);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
+            this.textBox11.Size = new System.Drawing.Size(103, 20);
             this.textBox11.TabIndex = 15;
             this.textBox11.Text = "无卡牌";
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(254, 163);
+            this.textBox12.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox12.Location = new System.Drawing.Point(254, 164);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
+            this.textBox12.Size = new System.Drawing.Size(103, 20);
             this.textBox12.TabIndex = 16;
             this.textBox12.Text = "无卡牌";
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(360, 163);
+            this.textBox13.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox13.Location = new System.Drawing.Point(360, 164);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
+            this.textBox13.Size = new System.Drawing.Size(103, 20);
             this.textBox13.TabIndex = 17;
             this.textBox13.Text = "无卡牌";
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(466, 163);
+            this.textBox14.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox14.Location = new System.Drawing.Point(466, 164);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
+            this.textBox14.Size = new System.Drawing.Size(103, 20);
             this.textBox14.TabIndex = 18;
             this.textBox14.Text = "无卡牌";
             this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(572, 163);
+            this.textBox15.Font = new System.Drawing.Font("宋体", 8F);
+            this.textBox15.Location = new System.Drawing.Point(572, 164);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
+            this.textBox15.Size = new System.Drawing.Size(103, 20);
             this.textBox15.TabIndex = 19;
             this.textBox15.Text = "无卡牌";
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // textBox16
             // 
+            this.textBox16.Font = new System.Drawing.Font("宋体", 8F);
             this.textBox16.Location = new System.Drawing.Point(148, 63);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
+            this.textBox16.Size = new System.Drawing.Size(103, 20);
             this.textBox16.TabIndex = 20;
             this.textBox16.Text = "无卡牌";
             // 
             // textBox17
             // 
+            this.textBox17.Font = new System.Drawing.Font("宋体", 8F);
             this.textBox17.Location = new System.Drawing.Point(254, 63);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
+            this.textBox17.Size = new System.Drawing.Size(103, 20);
             this.textBox17.TabIndex = 21;
             this.textBox17.Text = "无卡牌";
             // 
             // textBox18
             // 
+            this.textBox18.Font = new System.Drawing.Font("宋体", 8F);
             this.textBox18.Location = new System.Drawing.Point(360, 63);
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
             this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
+            this.textBox18.Size = new System.Drawing.Size(103, 20);
             this.textBox18.TabIndex = 22;
             this.textBox18.Text = "无卡牌";
             // 
             // textBox19
             // 
+            this.textBox19.Font = new System.Drawing.Font("宋体", 8F);
             this.textBox19.Location = new System.Drawing.Point(466, 63);
             this.textBox19.Multiline = true;
             this.textBox19.Name = "textBox19";
             this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
+            this.textBox19.Size = new System.Drawing.Size(103, 20);
             this.textBox19.TabIndex = 23;
             this.textBox19.Text = "无卡牌";
             // 
             // textBox20
             // 
+            this.textBox20.Font = new System.Drawing.Font("宋体", 8F);
             this.textBox20.Location = new System.Drawing.Point(572, 63);
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
             this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(100, 20);
+            this.textBox20.Size = new System.Drawing.Size(103, 20);
             this.textBox20.TabIndex = 24;
             this.textBox20.Text = "无卡牌";
             // 
             // PlayerBotton2
             // 
-            this.PlayerBotton2.Location = new System.Drawing.Point(35, 108);
+            this.PlayerBotton2.Location = new System.Drawing.Point(34, 108);
             this.PlayerBotton2.Name = "PlayerBotton2";
-            this.PlayerBotton2.Size = new System.Drawing.Size(75, 23);
+            this.PlayerBotton2.Size = new System.Drawing.Size(75, 22);
             this.PlayerBotton2.TabIndex = 26;
             this.PlayerBotton2.Text = "玩家2起牌";
             this.PlayerBotton2.UseVisualStyleBackColor = true;
@@ -296,17 +316,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(163, 422);
+            this.button1.Location = new System.Drawing.Point(164, 422);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 20);
+            this.button1.Size = new System.Drawing.Size(34, 20);
             this.button1.TabIndex = 27;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(269, 422);
+            this.button2.Location = new System.Drawing.Point(268, 422);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 20);
+            this.button2.Size = new System.Drawing.Size(34, 20);
             this.button2.TabIndex = 28;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -314,30 +334,30 @@
             // 
             this.button3.Location = new System.Drawing.Point(375, 422);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(35, 20);
+            this.button3.Size = new System.Drawing.Size(34, 20);
             this.button3.TabIndex = 29;
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(481, 422);
+            this.button4.Location = new System.Drawing.Point(482, 422);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(35, 20);
+            this.button4.Size = new System.Drawing.Size(34, 20);
             this.button4.TabIndex = 30;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(587, 422);
+            this.button5.Location = new System.Drawing.Point(586, 422);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 20);
+            this.button5.Size = new System.Drawing.Size(34, 20);
             this.button5.TabIndex = 31;
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(163, 306);
+            this.button6.Location = new System.Drawing.Point(164, 306);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(52, 20);
             this.button6.TabIndex = 32;
@@ -345,7 +365,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(269, 306);
+            this.button7.Location = new System.Drawing.Point(268, 306);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(52, 20);
             this.button7.TabIndex = 33;
@@ -361,7 +381,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(481, 306);
+            this.button9.Location = new System.Drawing.Point(482, 306);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(52, 20);
             this.button9.TabIndex = 35;
@@ -369,7 +389,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(587, 306);
+            this.button10.Location = new System.Drawing.Point(586, 306);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(52, 20);
             this.button10.TabIndex = 36;
@@ -377,7 +397,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(163, 134);
+            this.button11.Location = new System.Drawing.Point(164, 134);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(52, 20);
             this.button11.TabIndex = 37;
@@ -385,7 +405,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(269, 134);
+            this.button12.Location = new System.Drawing.Point(268, 134);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(52, 20);
             this.button12.TabIndex = 38;
@@ -401,7 +421,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(481, 134);
+            this.button14.Location = new System.Drawing.Point(482, 134);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(52, 20);
             this.button14.TabIndex = 40;
@@ -409,7 +429,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(587, 134);
+            this.button15.Location = new System.Drawing.Point(586, 134);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(52, 20);
             this.button15.TabIndex = 39;
@@ -417,17 +437,17 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(163, 34);
+            this.button16.Location = new System.Drawing.Point(164, 34);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(35, 20);
+            this.button16.Size = new System.Drawing.Size(34, 20);
             this.button16.TabIndex = 44;
             this.button16.UseVisualStyleBackColor = true;
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(269, 34);
+            this.button17.Location = new System.Drawing.Point(268, 34);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(35, 20);
+            this.button17.Size = new System.Drawing.Size(34, 20);
             this.button17.TabIndex = 43;
             this.button17.UseVisualStyleBackColor = true;
             // 
@@ -435,29 +455,29 @@
             // 
             this.button18.Location = new System.Drawing.Point(375, 34);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(35, 20);
+            this.button18.Size = new System.Drawing.Size(34, 20);
             this.button18.TabIndex = 42;
             this.button18.UseVisualStyleBackColor = true;
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(481, 34);
+            this.button19.Location = new System.Drawing.Point(482, 34);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(35, 20);
+            this.button19.Size = new System.Drawing.Size(34, 20);
             this.button19.TabIndex = 46;
             this.button19.UseVisualStyleBackColor = true;
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(587, 34);
+            this.button20.Location = new System.Drawing.Point(586, 34);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(35, 20);
+            this.button20.Size = new System.Drawing.Size(34, 20);
             this.button20.TabIndex = 45;
             this.button20.UseVisualStyleBackColor = true;
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(75, 137);
+            this.textBox21.Location = new System.Drawing.Point(75, 136);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(25, 21);
             this.textBox21.TabIndex = 47;
@@ -471,7 +491,7 @@
             // 
             // playerLife2
             // 
-            this.playerLife2.Location = new System.Drawing.Point(35, 13);
+            this.playerLife2.Location = new System.Drawing.Point(34, 14);
             this.playerLife2.Name = "playerLife2";
             this.playerLife2.ReadOnly = true;
             this.playerLife2.Size = new System.Drawing.Size(97, 21);
@@ -491,9 +511,9 @@
             // 
             // showStatusBox
             // 
-            this.showStatusBox.Location = new System.Drawing.Point(338, 7);
+            this.showStatusBox.Location = new System.Drawing.Point(338, 8);
             this.showStatusBox.Name = "showStatusBox";
-            this.showStatusBox.Size = new System.Drawing.Size(135, 21);
+            this.showStatusBox.Size = new System.Drawing.Size(134, 21);
             this.showStatusBox.TabIndex = 52;
             this.showStatusBox.Text = "游戏状态未初始化";
             this.showStatusBox.TextChanged += new System.EventHandler(this.showStatusBox_TextChanged);
@@ -506,7 +526,7 @@
             // 
             this.playerBotton1.Location = new System.Drawing.Point(700, 310);
             this.playerBotton1.Name = "playerBotton1";
-            this.playerBotton1.Size = new System.Drawing.Size(75, 23);
+            this.playerBotton1.Size = new System.Drawing.Size(75, 22);
             this.playerBotton1.TabIndex = 53;
             this.playerBotton1.Text = "玩家1起牌";
             this.playerBotton1.UseVisualStyleBackColor = true;
@@ -565,6 +585,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Font = new System.Drawing.Font("宋体", 9F);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

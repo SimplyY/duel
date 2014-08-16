@@ -13,15 +13,8 @@ namespace duel
     public partial class Form1 : Form
     {
         public Game duelGame { get; set; }
-        private double gameTime;
 
-        public void timer1_Tick(object sender, EventArgs e)
-        {
 
-            GameStatus.ShowGameStatus(showStatusBox);
-
-            gameTime += 0.2;
-        }
         public Form1()
         {
             InitializeComponent();
@@ -33,6 +26,50 @@ namespace duel
         {
             duelGame.cardManager1.showManager();
             duelGame.cardManager2.showManager();
+        }
+
+        public void timer1_Tick(object sender, EventArgs e)
+        {
+            if (!duelGame.hasError)
+            {
+                SetStatusBox();
+            }
+            GameStatus.ShowGameStatus(showStatusBox);
+            
+        }
+
+        private void SetStatusBox()
+        {
+            string status = "玩家" + Convert.ToString(duelGame.speakPlayer) + "的回合";
+            GameStatus.SetStatusInfo(status);
+        }
+
+        private void InitGame()
+        {
+            timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
+            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
+
+            duelGame = new Game();
+        }
+
+        private void playerBotton1_Click(object sender, EventArgs e)
+        {
+            duelGame.PickACard(1);
+            showNewTable();
+            if (duelGame.speakPlayer == 1)
+            {
+                duelGame.TransformSpeakerPlayer();
+            }
+        }
+
+        private void PlayerBotton2_Click(object sender, EventArgs e)
+        {
+            duelGame.PickACard(2);
+            showNewTable();
+            if (duelGame.speakPlayer == 2)
+            {
+                duelGame.TransformSpeakerPlayer();
+            }
         }
 
         private void InitDuelTextBox()
@@ -60,35 +97,6 @@ namespace duel
             DuelTextBoxs.Boxes.Add(textBox19);
             DuelTextBoxs.Boxes.Add(textBox20);
         }
-
-        private void InitGame()
-        {
-            timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
-            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
-            gameTime = 0;
-            duelGame = new Game();
-        }
-
-        private void playerBotton1_Click(object sender, EventArgs e)
-        {
-            duelGame.PickACard(1);
-            showNewTable();
-            if (duelGame.speakPlayer == 1)
-            {
-                duelGame.TransformSpeakerPlayer();
-            }
-        }
-
-        private void PlayerBotton2_Click(object sender, EventArgs e)
-        {
-            duelGame.PickACard(2);
-            showNewTable();
-            if (duelGame.speakPlayer == 2)
-            {
-                duelGame.TransformSpeakerPlayer();
-            }
-        }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {

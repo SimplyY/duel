@@ -10,6 +10,7 @@ namespace duel
     public class Game
     {
         public int speakPlayer { get; set; }
+        public bool hasError;
 
         public CardFactory cardFactory1 { get; private set; }
         public CardFactory cardFactory2 { get; private set; }
@@ -45,7 +46,7 @@ namespace duel
             if (speakPlayer != 1 && speakPlayer != 2)
             {
                 speakPlayer = -1;
-                GameStatus.SetStatusInfo("speakPlayerValueWrong");
+
             }
 
             if (speakPlayer == 1)

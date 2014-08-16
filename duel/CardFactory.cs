@@ -38,7 +38,7 @@ namespace duel
             else
             {
                 PopedCard.ChineseName = "Empty";
-                GameStatus.SetStatusInfo("cards is empty");
+                GameStatus.SetErrorInfo("cards is empty");
                 return PopedCard;
             }
         }
@@ -53,7 +53,7 @@ namespace duel
             catch (IOException)
             {
                 this.cards.Add(new Card());
-                GameStatus.SetStatusInfo("读取卡牌信息发生错误");
+                GameStatus.SetErrorInfo("读取卡牌信息发生错误");
                 //TODO
             }
         }
@@ -89,7 +89,7 @@ namespace duel
 
             if (theCharIndex == -1)
             {
-                GameStatus.SetStatusInfo("卡牌信息有误");
+                GameStatus.SetErrorInfo("卡牌信息有误");
             }
             else
             {

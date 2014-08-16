@@ -10,9 +10,14 @@ namespace duel
     {
         private static string statusInfo;
 
-        public static void SetStatusInfo(string statusString)
+        public static void SetStatusInfo(string status)
         {
-            statusInfo = statusString;
+            statusInfo = status;
+        }
+
+        public static void SetErrorInfo(string errorInfo)
+        {
+            statusInfo = errorInfo;
         }
 
         public static void ShowGameStatus(System.Windows.Forms.TextBox showStatusBox)

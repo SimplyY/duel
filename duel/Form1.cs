@@ -17,7 +17,9 @@ namespace duel
 
         public void timer1_Tick(object sender, EventArgs e)
         {
+
             GameStatus.ShowGameStatus(showStatusBox);
+
             gameTime += 0.2;
         }
         public Form1()

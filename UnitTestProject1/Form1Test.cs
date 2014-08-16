@@ -108,8 +108,8 @@ namespace UnitTestProject1
         {
             const string info1 = "怪兽名：诅咒之龙\r\n攻击力：500\r\n防守力：";
             int info2 = 1;
-            int cardsManager1Amount = 2;
-            int cardsManager2Amount = 3;
+            int cardsManager1Amount = 4;
+            int cardsManager2Amount = 5;
 
             string expectedBoxesShowInfo = "";
             BuiltExpectedBoxesShowInfo(ref expectedBoxesShowInfo, cardsManager1Amount, info1, info2);

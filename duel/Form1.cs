@@ -26,8 +26,8 @@ namespace duel
         {
             duelGame.cardFactory1.ShowCardsAmount();
             duelGame.cardFactory2.ShowCardsAmount();
-            duelGame.cardManager1.ShowManager();
-            duelGame.cardManager2.ShowManager();
+            duelGame.cardManager1.Show();
+            duelGame.cardManager2.Show();
         }
 
         public void timer1_Tick(object sender, EventArgs e)

@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 
 namespace duel
 {
-    public class CardsDuel
+    public class CardsDuel : CardsManager
     {
-        public int numberOfDuel;
-        public List<Card> cards { get; private set; }
+        public CardsDuel(int number, int theBeginIndexOfBoxes) :base(number ,theBeginIndexOfBoxes){}
 
-        public CardsDuel(int numberOfDuel)
-        {
-            this.numberOfDuel = numberOfDuel;
-            cards = new List<Card>();
-        }
+
     }
 }

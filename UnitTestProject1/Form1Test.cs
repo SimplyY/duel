@@ -92,6 +92,7 @@ namespace UnitTestProject1
             BuiltExpectedBoxesShowInfo(ref expectedBoxesShowInfo, cardsManager2Amount, info1, info2);
 
             Form1 target = new Form1(); // TODO: 初始化为适当的值
+
             CardsManager cardManager1 = target.duelGame.cardManager1;
             CardsManager cardManager2 = target.duelGame.cardManager2;
             BuiltActualCardsInfo(cardManager1, cardsManager1Amount, info1, info2);

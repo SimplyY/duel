@@ -70,11 +70,11 @@ namespace duel
             cardFactory1 = new CardsFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 1);
             cardFactory2 = new CardsFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 2);
 
-            cardManager1 = new CardsManager(1);
-            cardManager2 = new CardsManager(2);
+            cardManager1 = new CardsManager(1, 0);
+            cardManager2 = new CardsManager(2, 15);
 
-            cardDuel1 = new CardsDuel(1);
-            cardDuel2 = new CardsDuel(2);
+            cardDuel1 = new CardsDuel(1, 5);
+            cardDuel2 = new CardsDuel(2, 10);
 
             cardFactory1.ShowCardsAmount();
             cardFactory2.ShowCardsAmount();

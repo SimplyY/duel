@@ -8,30 +8,43 @@ namespace duel
 {
     public class CardsManager
     {
-        public int numberOfManager;
+        public int number;
+        public int theBeginIndexOfBoxes { get; set; }
         public List<Card> cards { get; private set; }
 
-        public CardsManager(int numberOfManager)
+        public CardsManager(){}
+        public CardsManager(int number, int theBeginIndexOfBoxes)
         {
-            this.numberOfManager = numberOfManager;
+            this.number = number;
+            this.theBeginIndexOfBoxes = theBeginIndexOfBoxes;
             cards = new List<Card>();
         }
+
+        public void Show()
+        {
+            DuelTextBoxs.ShowTextBox(cards, theBeginIndexOfBoxes);
+        }
+
         public void PushACard(Card pushedCard)
         {
             cards.Add(pushedCard);
         }
-        public void ShowManager()
+
+        public Card PopACard()
         {
-            int boxesBeginIndex = -1;
-            if (numberOfManager == 1)
+            Card PopedCard = new Card();
+            if (cards.Count > 0)
             {
-                boxesBeginIndex = 0;
+                PopedCard = cards[0];
+                cards.RemoveAt(0);
+                return PopedCard;
             }
-            else if (numberOfManager == 2)
+            else
             {
-                boxesBeginIndex = 15;
+                PopedCard.ChineseName = "Empty";
+                GameStatus.SetErrorInfo("cards is empty");
+                return PopedCard;
             }
-            DuelTextBoxs.ShowTextBox(cards, boxesBeginIndex);
         }
     }
 }

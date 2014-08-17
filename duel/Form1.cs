@@ -22,10 +22,12 @@ namespace duel
             InitGame();
         }
 
-        public void showNewTable()
+        public void ShowNewTable()
         {
-            duelGame.cardManager1.showManager();
-            duelGame.cardManager2.showManager();
+            duelGame.cardFactory1.ShowCardsAmount();
+            duelGame.cardFactory2.ShowCardsAmount();
+            duelGame.cardManager1.ShowManager();
+            duelGame.cardManager2.ShowManager();
         }
 
         public void timer1_Tick(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace duel
         private void playerBotton1_Click(object sender, EventArgs e)
         {
             duelGame.PickACard(1);
-            showNewTable();
+            ShowNewTable();
             if (duelGame.speakPlayer == 1)
             {
                 duelGame.TransformSpeakerPlayer();
@@ -65,7 +67,7 @@ namespace duel
         private void PlayerBotton2_Click(object sender, EventArgs e)
         {
             duelGame.PickACard(2);
-            showNewTable();
+            ShowNewTable();
             if (duelGame.speakPlayer == 2)
             {
                 duelGame.TransformSpeakerPlayer();
@@ -96,6 +98,10 @@ namespace duel
             DuelTextBoxs.Boxes.Add(textBox18);
             DuelTextBoxs.Boxes.Add(textBox19);
             DuelTextBoxs.Boxes.Add(textBox20);
+
+
+            DuelTextBoxs.Boxes.Add(Favtory1CardsAmountTextBox);
+            DuelTextBoxs.Boxes.Add(Favtory2CardsAmountTextBox);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -149,6 +155,11 @@ namespace duel
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox21_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -20,7 +20,7 @@ namespace duel
         {
             cards.Add(pushedCard);
         }
-        public void showManager()
+        public void ShowManager()
         {
             int boxesBeginIndex = -1;
             if (numberOfManager == 1)

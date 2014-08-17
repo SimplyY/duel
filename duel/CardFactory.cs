@@ -9,27 +9,44 @@ namespace duel
 {
     public class CardFactory
     {
-
+        public int FactoryNumber;
         public List<Card> cards;
 
-        private string cardsInfoFileLocation ;
+        private string cardsInfoFileLocation;
 
-        public void setCardsInfoFileLocation(string cardsInfoFileLocation)
+        public CardFactory(string cardsInfoFileLocation, int number)
+        {
+            FactoryNumber = number;
+            cards = new List<Card>();
+
+            SetCardsInfoFileLocation(cardsInfoFileLocation);
+            readFile();
+        }
+
+        public void ShowCardsAmount()
+        {
+            const string info = "剩余卡牌数：";
+            if (FactoryNumber == 1)
+            {
+                DuelTextBoxs.Boxes[20].Text = info + Convert.ToString(cards.Count);
+            }
+            else if (FactoryNumber == 2)
+            {
+                DuelTextBoxs.Boxes[21].Text = Convert.ToString(cards.Count);
+            }
+        }
+
+
+        public void SetCardsInfoFileLocation(string cardsInfoFileLocation)
         {
             this.cardsInfoFileLocation = cardsInfoFileLocation;
         }
 
-        public CardFactory(string cardsInfoFileLocation)
-        {
-            cards = new List<Card>();
-            setCardsInfoFileLocation(cardsInfoFileLocation);
-            readFile();
-        }
 
         public Card PopACard()
         {
             Card PopedCard = new Card();
-            if(cards.Count>0)
+            if (cards.Count > 0)
             {
                 PopedCard = cards[0];
                 cards.RemoveAt(0);
@@ -93,12 +110,12 @@ namespace duel
             }
             else
             {
-                lineInfo = lineInfo.Substring(theCharIndex+1);
+                lineInfo = lineInfo.Substring(theCharIndex + 1);
             }
-            
+
             return lineInfo;
         }
-            
-        
+
+
     }
 }

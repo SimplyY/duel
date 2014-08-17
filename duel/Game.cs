@@ -30,11 +30,11 @@ namespace duel
 
             if (playerButton == speakPlayer)
             {
-                if (playerButton == 1 && cardManager1.cards.Count <= 4 && cardFactory1.cards.Count>0)
+                if (playerButton == 1 && cardManager1.cards.Count <= 4 && cardFactory1.cards.Count > 0)
                 {
                     SendACardToManager();
                 }
-                else if (playerButton == 2 && cardManager2.cards.Count <= 4 && cardFactory2.cards.Count>0)
+                else if (playerButton == 2 && cardManager2.cards.Count <= 4 && cardFactory2.cards.Count > 0)
                 {
                     SendACardToManager();
                 }
@@ -67,14 +67,17 @@ namespace duel
         {
             GameStatus.SetStatusInfo("游戏已经开始");
 
-            cardFactory1 = new CardFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt");
-            cardFactory2 = new CardFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt");
+            cardFactory1 = new CardFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 1);
+            cardFactory2 = new CardFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 2);
 
             cardManager1 = new CardManager(1);
             cardManager2 = new CardManager(2);
 
             cardDuel1 = new CardDuel(1);
             cardDuel2 = new CardDuel(2);
+
+            cardFactory1.ShowCardsAmount();
+            cardFactory2.ShowCardsAmount();
 
             speakPlayer = 1;
         }

@@ -71,8 +71,8 @@
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.Favtory1CardsAmountTextBox = new System.Windows.Forms.TextBox();
+            this.Favtory2CardsAmountTextBox = new System.Windows.Forms.TextBox();
             this.playerLife2 = new System.Windows.Forms.TextBox();
             this.playerLife1 = new System.Windows.Forms.TextBox();
             this.showStatusBox = new System.Windows.Forms.TextBox();
@@ -306,7 +306,7 @@
             // 
             // PlayerBotton2
             // 
-            this.PlayerBotton2.Location = new System.Drawing.Point(34, 108);
+            this.PlayerBotton2.Location = new System.Drawing.Point(56, 105);
             this.PlayerBotton2.Name = "PlayerBotton2";
             this.PlayerBotton2.Size = new System.Drawing.Size(75, 22);
             this.PlayerBotton2.TabIndex = 26;
@@ -477,17 +477,18 @@
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(75, 136);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(25, 21);
-            this.textBox21.TabIndex = 47;
+            this.Favtory1CardsAmountTextBox.Location = new System.Drawing.Point(724, 345);
+            this.Favtory1CardsAmountTextBox.Name = "textBox21";
+            this.Favtory1CardsAmountTextBox.Size = new System.Drawing.Size(25, 21);
+            this.Favtory1CardsAmountTextBox.TabIndex = 47;
+            this.Favtory1CardsAmountTextBox.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(738, 346);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(25, 21);
-            this.textBox22.TabIndex = 48;
+            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(83, 135);
+            this.Favtory2CardsAmountTextBox.Name = "textBox22";
+            this.Favtory2CardsAmountTextBox.Size = new System.Drawing.Size(25, 21);
+            this.Favtory2CardsAmountTextBox.TabIndex = 48;
             // 
             // playerLife2
             // 
@@ -524,7 +525,7 @@
             // 
             // playerBotton1
             // 
-            this.playerBotton1.Location = new System.Drawing.Point(700, 310);
+            this.playerBotton1.Location = new System.Drawing.Point(697, 312);
             this.playerBotton1.Name = "playerBotton1";
             this.playerBotton1.Size = new System.Drawing.Size(75, 22);
             this.playerBotton1.TabIndex = 53;
@@ -542,8 +543,8 @@
             this.Controls.Add(this.showStatusBox);
             this.Controls.Add(this.playerLife1);
             this.Controls.Add(this.playerLife2);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox21);
+            this.Controls.Add(this.Favtory2CardsAmountTextBox);
+            this.Controls.Add(this.Favtory1CardsAmountTextBox);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.button16);
@@ -639,8 +640,8 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox Favtory1CardsAmountTextBox;
+        private System.Windows.Forms.TextBox Favtory2CardsAmountTextBox;
         private System.Windows.Forms.TextBox playerLife2;
         private System.Windows.Forms.TextBox playerLife1;
         private System.Windows.Forms.Timer timer1;

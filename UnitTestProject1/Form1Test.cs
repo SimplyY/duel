@@ -76,30 +76,6 @@ namespace UnitTestProject1
         }
 
 
-
-
-        /// <summary>
-        ///timer1_Tick 的测试
-        ///</summary>
-        [TestMethod()]
-        public void timer1_TickTest()
-        {
-            int expected = 20;
-
-            int times = 10;
-
-            Form1 targetForm = new Form1(); // TODO: 初始化为适当的值
-            object sender = null; // TODO: 初始化为适当的值
-            EventArgs e = null; // TODO: 初始化为适当的值
-            for (int i = 0; i < times; i++)
-            {
-                targetForm.timer1_Tick(sender, e);
-            }
-            int actual = DuelTextBoxs.Boxes.Count;
-
-            Assert.AreEqual(expected, actual);
-        }
-
         /// <summary>
         ///showNewTable 的测试
         ///</summary>
@@ -121,7 +97,7 @@ namespace UnitTestProject1
             BuiltActualCardsInfo(cardManager1, cardsManager1Amount, info1, info2);
             BuiltActualCardsInfo(cardManager2, cardsManager2Amount, info1, info2);
 
-            target.showNewTable();
+            target.ShowNewTable();
 
             string actualBoxesShowInfo = "";
             BuiltActualBoxesShowInfo(ref actualBoxesShowInfo, cardManager1.cards, 0);

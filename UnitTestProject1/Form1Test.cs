@@ -92,8 +92,8 @@ namespace UnitTestProject1
             BuiltExpectedBoxesShowInfo(ref expectedBoxesShowInfo, cardsManager2Amount, info1, info2);
 
             Form1 target = new Form1(); // TODO: 初始化为适当的值
-            CardManager cardManager1 = target.duelGame.cardManager1;
-            CardManager cardManager2 = target.duelGame.cardManager2;
+            CardsManager cardManager1 = target.duelGame.cardManager1;
+            CardsManager cardManager2 = target.duelGame.cardManager2;
             BuiltActualCardsInfo(cardManager1, cardsManager1Amount, info1, info2);
             BuiltActualCardsInfo(cardManager2, cardsManager2Amount, info1, info2);
 
@@ -116,7 +116,7 @@ namespace UnitTestProject1
             }
         }
 
-        private void BuiltActualCardsInfo(CardManager owner, int cardsAmount, string info1, int info2)
+        private void BuiltActualCardsInfo(CardsManager owner, int cardsAmount, string info1, int info2)
         {
             for (int i = 0; i < cardsAmount; i++)
             {
@@ -128,7 +128,7 @@ namespace UnitTestProject1
                 owner.cards.Add(builtedCard);
             }
         }
-        private void BuiltActualCardsInfo(CardDuel owner, int cardsAmount, string info1, int info2)
+        private void BuiltActualCardsInfo(CardsDuel owner, int cardsAmount, string info1, int info2)
         {
             for (int i = 0; i < cardsAmount; i++)
             {

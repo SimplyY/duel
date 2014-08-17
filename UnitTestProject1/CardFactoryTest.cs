@@ -13,7 +13,7 @@ namespace UnitTestProject1
             const int cardNumber = 10;
             string expectedString = "杀手蜂";
 
-            CardFactory actualCardFactory = new CardFactory("../../../duel/duelInfo.txt", 1);
+            CardsFactory actualCardFactory = new CardsFactory("../../../duel/duelInfo.txt", 1);
             string actualString = actualCardFactory.cards[cardNumber - 1].ChineseName;
 
             Assert.AreEqual(expectedString, actualString);
@@ -27,7 +27,7 @@ namespace UnitTestProject1
             string expectedChineseName = null;
 
             string cardsInfoFileLocation = "C:\\Users\\yuwei\\Desktop\\duelInf"; //the test of wrong location 
-            CardFactory target = new CardFactory(cardsInfoFileLocation, 1);
+            CardsFactory target = new CardsFactory(cardsInfoFileLocation, 1);
             Card actualCard = target.PopACard();
             string actualChineseName = actualCard.ChineseName;
 
@@ -43,7 +43,7 @@ namespace UnitTestProject1
             string expectedChineseName = "杀手蜂";
 
             int PopedNumber = 10;
-            CardFactory target = new CardFactory("../../../duel/duelInfo.txt", 1);
+            CardsFactory target = new CardsFactory("../../../duel/duelInfo.txt", 1);
 
             Card actual = target.PopACard();
             for (int i = 1; i < PopedNumber; i++)
@@ -63,7 +63,7 @@ namespace UnitTestProject1
             string expectedChineseName = "Empty";
 
             int PopedNumber = 11;
-            CardFactory target = new CardFactory("C:\\Users\\yuwei\\Desktop\\duelInfo.txt", 1);
+            CardsFactory target = new CardsFactory("C:\\Users\\yuwei\\Desktop\\duelInfo.txt", 1);
 
             Card actual = target.PopACard();
             for (int i = 1; i < PopedNumber; i++)
@@ -86,7 +86,7 @@ namespace UnitTestProject1
             int pickCardTimes = 1;
 
             Form1 targetForm = new Form1();
-            CardFactory target = targetForm.duelGame.cardFactory1;
+            CardsFactory target = targetForm.duelGame.cardFactory1;
             if (pickCardTimes == 1)
             {
                 targetForm.duelGame.PickACard(1);

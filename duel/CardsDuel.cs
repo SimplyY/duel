@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace duel
 {
-    public class CardDuel
+    public class CardsDuel
     {
         public int numberOfDuel;
         public List<Card> cards { get; private set; }
 
-        public CardDuel(int numberOfDuel)
+        public CardsDuel(int numberOfDuel)
         {
             this.numberOfDuel = numberOfDuel;
             cards = new List<Card>();

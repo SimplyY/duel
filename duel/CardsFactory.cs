@@ -7,14 +7,14 @@ using System.IO;
 
 namespace duel
 {
-    public class CardFactory
+    public class CardsFactory
     {
         public int FactoryNumber;
         public List<Card> cards;
 
         private string cardsInfoFileLocation;
 
-        public CardFactory(string cardsInfoFileLocation, int number)
+        public CardsFactory(string cardsInfoFileLocation, int number)
         {
             FactoryNumber = number;
             cards = new List<Card>();

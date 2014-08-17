@@ -111,7 +111,7 @@ namespace UnitTestProject1
             {
                 targetGame.PickACard(playerButton);
             }
-            CardManager theManager = targetGame.cardManager1;
+            CardsManager theManager = targetGame.cardManager1;
             Card theCard = theManager.cards[pickTimes - 1];
             string actualChineseName = theCard.ChineseName;
 
@@ -137,7 +137,7 @@ namespace UnitTestProject1
             {
                 targetGame.PickACard(playerButton);
             }
-            CardManager theManager = targetGame.cardManager2;
+            CardsManager theManager = targetGame.cardManager2;
             Card theCard = theManager.cards[pickTimes - 1];
             string actualChineseName = theCard.ChineseName;
             Assert.AreEqual(expectedChineseName, actualChineseName);
@@ -159,8 +159,8 @@ namespace UnitTestProject1
                 targetGame.PickACard(playerButton);
             }
             int actualCardslAmount = 0;
-            CardManager theManager = targetGame.cardManager1;
-            CardFactory theFactory = targetGame.cardFactory1;
+            CardsManager theManager = targetGame.cardManager1;
+            CardsFactory theFactory = targetGame.cardFactory1;
             if (pickTimes <= 0)
             {
                 ecpectedCardsAmount = 0;

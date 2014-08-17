@@ -7,7 +7,7 @@ The most simple vertion of "duel manster" game
 IPORTANT ISSUE
 ----
 1. **SpeakerPlayer's value**.There is a big question about how to find correct time to change speakerPlayer's value.
-2. **Manage a lot bottons**.I need to create a class to manage it.
+2. **Manage a lot bottons**.Manage botton by creating new function(click) of CardsManagers and CardsDuels.
 
 TODO！
 ------

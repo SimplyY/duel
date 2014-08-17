@@ -12,14 +12,14 @@ namespace duel
         public int speakPlayer { get; set; }
         public bool hasError;
 
-        public CardFactory cardFactory1 { get; private set; }
-        public CardFactory cardFactory2 { get; private set; }
+        public CardsFactory cardFactory1 { get; private set; }
+        public CardsFactory cardFactory2 { get; private set; }
 
-        public CardManager cardManager1 { get; private set; }
-        public CardManager cardManager2 { get; private set; }
+        public CardsManager cardManager1 { get; private set; }
+        public CardsManager cardManager2 { get; private set; }
 
-        CardDuel cardDuel1;
-        CardDuel cardDuel2;
+        CardsDuel cardDuel1;
+        CardsDuel cardDuel2;
 
 
 
@@ -67,14 +67,14 @@ namespace duel
         {
             GameStatus.SetStatusInfo("游戏已经开始");
 
-            cardFactory1 = new CardFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 1);
-            cardFactory2 = new CardFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 2);
+            cardFactory1 = new CardsFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 1);
+            cardFactory2 = new CardsFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 2);
 
-            cardManager1 = new CardManager(1);
-            cardManager2 = new CardManager(2);
+            cardManager1 = new CardsManager(1);
+            cardManager2 = new CardsManager(2);
 
-            cardDuel1 = new CardDuel(1);
-            cardDuel2 = new CardDuel(2);
+            cardDuel1 = new CardsDuel(1);
+            cardDuel2 = new CardsDuel(2);
 
             cardFactory1.ShowCardsAmount();
             cardFactory2.ShowCardsAmount();

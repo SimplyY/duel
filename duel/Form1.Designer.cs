@@ -475,19 +475,21 @@
             this.button20.TabIndex = 45;
             this.button20.UseVisualStyleBackColor = true;
             // 
-            // textBox21
+            // Favtory1CardsAmountTextBox
             // 
-            this.Favtory1CardsAmountTextBox.Location = new System.Drawing.Point(724, 345);
-            this.Favtory1CardsAmountTextBox.Name = "textBox21";
-            this.Favtory1CardsAmountTextBox.Size = new System.Drawing.Size(25, 21);
+            this.Favtory1CardsAmountTextBox.Location = new System.Drawing.Point(681, 351);
+            this.Favtory1CardsAmountTextBox.Name = "Favtory1CardsAmountTextBox";
+            this.Favtory1CardsAmountTextBox.ReadOnly = true;
+            this.Favtory1CardsAmountTextBox.Size = new System.Drawing.Size(90, 21);
             this.Favtory1CardsAmountTextBox.TabIndex = 47;
             this.Favtory1CardsAmountTextBox.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             // 
-            // textBox22
+            // Favtory2CardsAmountTextBox
             // 
-            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(83, 135);
-            this.Favtory2CardsAmountTextBox.Name = "textBox22";
-            this.Favtory2CardsAmountTextBox.Size = new System.Drawing.Size(25, 21);
+            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(40, 141);
+            this.Favtory2CardsAmountTextBox.Name = "Favtory2CardsAmountTextBox";
+            this.Favtory2CardsAmountTextBox.ReadOnly = true;
+            this.Favtory2CardsAmountTextBox.Size = new System.Drawing.Size(90, 21);
             this.Favtory2CardsAmountTextBox.TabIndex = 48;
             // 
             // playerLife2

@@ -32,7 +32,7 @@ namespace duel
             }
             else if (FactoryNumber == 2)
             {
-                DuelTextBoxs.Boxes[21].Text = Convert.ToString(cards.Count);
+                DuelTextBoxs.Boxes[21].Text = info + Convert.ToString(cards.Count);
             }
         }
 

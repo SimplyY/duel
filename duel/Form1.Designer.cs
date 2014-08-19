@@ -621,6 +621,7 @@
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Button playerBotton1;
         private System.Windows.Forms.Button PlayerBotton2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -647,7 +648,6 @@
         private System.Windows.Forms.TextBox playerLife2;
         private System.Windows.Forms.TextBox playerLife1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button playerBotton1;
     }
 }
 

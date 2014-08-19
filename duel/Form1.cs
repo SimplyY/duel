@@ -70,8 +70,6 @@ namespace duel
             ShowNewTable();
         }
 
-
-
         private void InitDuelTextBox()
         {
             DuelTextBoxs.Boxes = new List<TextBox>();
@@ -101,8 +99,6 @@ namespace duel
             DuelTextBoxs.Boxes.Add(Favtory1CardsAmountTextBox);
             DuelTextBoxs.Boxes.Add(Favtory2CardsAmountTextBox);
         }
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {

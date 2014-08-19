@@ -315,50 +315,55 @@
             this.button1.Location = new System.Drawing.Point(164, 421);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 20);
-            this.button1.TabIndex = 27;
+            this.button1.TabIndex = 1;
+            this.button1.Tag = "1";
             this.button1.Text = "出牌";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.SendToDuel);
+            this.button1.Click += new System.EventHandler(this.SendToDuel1);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(268, 421);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(52, 20);
-            this.button2.TabIndex = 28;
+            this.button2.TabIndex = 2;
+            this.button2.Tag = "2";
             this.button2.Text = "出牌";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.SendToDuel);
+            this.button2.Click += new System.EventHandler(this.SendToDuel1);
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(375, 421);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(52, 20);
-            this.button3.TabIndex = 29;
+            this.button3.TabIndex = 3;
+            this.button3.Tag = "3";
             this.button3.Text = "出牌";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.SendToDuel);
+            this.button3.Click += new System.EventHandler(this.SendToDuel1);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(482, 421);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(52, 20);
-            this.button4.TabIndex = 30;
+            this.button4.TabIndex = 4;
+            this.button4.Tag = "4";
             this.button4.Text = "出牌";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.SendToDuel);
+            this.button4.Click += new System.EventHandler(this.SendToDuel1);
             // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(586, 421);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(52, 20);
-            this.button5.TabIndex = 31;
+            this.button5.TabIndex = 5;
+            this.button5.Tag = "5";
             this.button5.Text = "出牌";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.SendToDuel);
+            this.button5.Click += new System.EventHandler(this.SendToDuel1);
             // 
             // button6
             // 
@@ -366,6 +371,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(52, 20);
             this.button6.TabIndex = 32;
+            this.button6.Tag = "6";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -375,6 +381,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(52, 20);
             this.button7.TabIndex = 33;
+            this.button7.Tag = "7";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -384,6 +391,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(52, 20);
             this.button8.TabIndex = 34;
+            this.button8.Tag = "8";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -393,6 +401,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(52, 20);
             this.button9.TabIndex = 35;
+            this.button9.Tag = "9";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -402,6 +411,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(52, 20);
             this.button10.TabIndex = 36;
+            this.button10.Tag = "10";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -411,6 +421,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(52, 20);
             this.button11.TabIndex = 37;
+            this.button11.Tag = "11";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -420,6 +431,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(52, 20);
             this.button12.TabIndex = 38;
+            this.button12.Tag = "12";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
@@ -429,6 +441,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(52, 20);
             this.button13.TabIndex = 41;
+            this.button13.Tag = "13";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -438,6 +451,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(52, 20);
             this.button14.TabIndex = 40;
+            this.button14.Tag = "14";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
@@ -447,6 +461,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(52, 20);
             this.button15.TabIndex = 39;
+            this.button15.Tag = "15";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
@@ -456,9 +471,10 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(52, 20);
             this.button16.TabIndex = 44;
+            this.button16.Tag = "16";
             this.button16.Text = "出牌";
             this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button16.Click += new System.EventHandler(this.SendToDuel2);
             // 
             // button17
             // 
@@ -466,9 +482,10 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(52, 20);
             this.button17.TabIndex = 43;
+            this.button17.Tag = "17";
             this.button17.Text = "出牌";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.Click += new System.EventHandler(this.SendToDuel2);
             // 
             // button18
             // 
@@ -476,9 +493,10 @@
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(52, 20);
             this.button18.TabIndex = 42;
+            this.button18.Tag = "18";
             this.button18.Text = "出牌";
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.button18.Click += new System.EventHandler(this.SendToDuel2);
             // 
             // button19
             // 
@@ -486,9 +504,10 @@
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(52, 20);
             this.button19.TabIndex = 46;
+            this.button19.Tag = "19";
             this.button19.Text = "出牌";
             this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.button19.Click += new System.EventHandler(this.SendToDuel2);
             // 
             // button20
             // 
@@ -496,9 +515,10 @@
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(52, 20);
             this.button20.TabIndex = 45;
+            this.button20.Tag = "20";
             this.button20.Text = "出牌";
             this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.button20.Click += new System.EventHandler(this.SendToDuel2);
             // 
             // Favtory1CardsAmountTextBox
             // 

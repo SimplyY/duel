@@ -19,7 +19,7 @@ namespace duel
         {
             InitializeComponent();
             InitDuelTextBox();
-            
+
             InitGame();
         }
 
@@ -102,18 +102,47 @@ namespace duel
             DuelTextBoxs.Boxes.Add(Favtory2CardsAmountTextBox);
         }
 
-      
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void SendToDuel(object sender, EventArgs e)
+        private void SendToDuel1(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
+            int tag = Convert.ToInt32(button.Tag);
+            int duelNumber = 1;
+            int cardIndex = getIndexFromTag(tag, duelNumber);
+            duelGame.SendACardToDuel(cardIndex, duelNumber);
 
+            ShowNewTable();
         }
 
+        private void SendToDuel2(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            int tag = Convert.ToInt32(button.Tag);
+            int duelNumber = 2;
+            int cardIndex = getIndexFromTag(tag, duelNumber);
+            duelGame.SendACardToDuel(cardIndex ,duelNumber);
+
+            ShowNewTable();
+        }
+
+        private int getIndexFromTag(int tag, int duelNumber)
+        {
+            if (duelNumber == 1 && tag >= 1 && tag <= 5)
+            {
+                return tag - 1;
+            }
+            else if (duelNumber == 2 && tag >= 16 && tag <= 20)
+            {
+                return tag - 16;
+            }
+            return -1;
+        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -165,30 +194,6 @@ namespace duel
 
         }
 
-        private void button16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button20_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
 

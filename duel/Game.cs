@@ -93,16 +93,16 @@ namespace duel
                 sendedCard = new Card();
             }
         }
-        
-        private void SendACardToDuel(int cardIndex)
+
+        public void SendACardToDuel(int cardIndex, int duelNumber)
         {
             Card sendedCard;
-            if (speakPlayer == 1)
+            if (speakPlayer == 1 && duelNumber == 1)
             {
                 sendedCard = cardManager1.SendACard(cardIndex);
                 cardDuel1.PushACard(sendedCard);
             }
-            else if (speakPlayer == 2)
+            else if (speakPlayer == 2 && duelNumber == 2)
             {
                 sendedCard = cardManager2.SendACard(cardIndex);
                 cardDuel2.PushACard(sendedCard);

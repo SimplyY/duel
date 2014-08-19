@@ -19,7 +19,7 @@ namespace duel
         {
             InitializeComponent();
             InitDuelTextBox();
-            InitBootons();
+            
             InitGame();
         }
 
@@ -102,32 +102,7 @@ namespace duel
             DuelTextBoxs.Boxes.Add(Favtory2CardsAmountTextBox);
         }
 
-        private void InitBootons()
-        {
-            Buttons.Buttons = new List<Button>();
-
-            Buttons.Buttons.Add(button1);
-            Buttons.Buttons.Add(button2);
-            Buttons.Buttons.Add(button3);
-            Buttons.Buttons.Add(button4);
-            Buttons.Buttons.Add(button5);
-            Buttons.Buttons.Add(button6);
-            Buttons.Buttons.Add(button7);
-            Buttons.Buttons.Add(button8);
-            Buttons.Buttons.Add(button9);
-            Buttons.Buttons.Add(button10);
-            Buttons.Buttons.Add(button11);
-            Buttons.Buttons.Add(button12);
-            Buttons.Buttons.Add(button13);
-            Buttons.Buttons.Add(button14);
-            Buttons.Buttons.Add(button15);
-            Buttons.Buttons.Add(button16);
-            Buttons.Buttons.Add(button17);
-            Buttons.Buttons.Add(button18);
-            Buttons.Buttons.Add(button19);
-            Buttons.Buttons.Add(button20);
-
-        }
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {

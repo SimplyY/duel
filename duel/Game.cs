@@ -18,8 +18,8 @@ namespace duel
         public CardsManager cardManager1 { get; private set; }
         public CardsManager cardManager2 { get; private set; }
 
-        CardsDuel cardDuel1;
-        CardsDuel cardDuel2;
+        public CardsDuel cardDuel1;
+        public CardsDuel cardDuel2;
 
         //rule1: player1 get factoy1's cards.player2 get factoy2's cards.
         //rule2: the amount of cards is limited.
@@ -94,17 +94,17 @@ namespace duel
             }
         }
         
-        private void SendACardToDuel()
+        private void SendACardToDuel(int cardIndex)
         {
             Card sendedCard;
             if (speakPlayer == 1)
             {
-                sendedCard = cardManager1.PopACard();
+                sendedCard = cardManager1.SendACard(cardIndex);
                 cardDuel1.PushACard(sendedCard);
             }
             else if (speakPlayer == 2)
             {
-                sendedCard = cardManager2.PopACard();
+                sendedCard = cardManager2.SendACard(cardIndex);
                 cardDuel2.PushACard(sendedCard);
             }
             else

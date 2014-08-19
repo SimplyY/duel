@@ -46,5 +46,23 @@ namespace duel
                 return PopedCard;
             }
         }
+
+        public Card SendACard(int cardIndex)
+        {
+            Card SendCard = new Card();
+            if (cards.Count > 0)
+            {
+                SendCard = cards[cardIndex];
+                cards.RemoveAt(cardIndex);
+                return SendCard;
+            }
+            else
+            {
+                SendCard.ChineseName = "Empty";
+                GameStatus.SetErrorInfo("cards is empty");
+                return SendCard;
+            }
+        }
+
     }
 }

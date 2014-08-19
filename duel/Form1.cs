@@ -29,6 +29,9 @@ namespace duel
             duelGame.cardFactory2.ShowCardsAmount();
             duelGame.cardManager1.Show();
             duelGame.cardManager2.Show();
+            duelGame.cardDuel1.Show();
+            duelGame.cardDuel2.Show();
+
         }
 
         public void timer1_Tick(object sender, EventArgs e)
@@ -59,20 +62,12 @@ namespace duel
         {
             duelGame.PickACard(1);
             ShowNewTable();
-            if (duelGame.speakPlayer == 1)
-            {
-                duelGame.TransformSpeakerPlayer();
-            }
         }
 
         private void PlayerBotton2_Click(object sender, EventArgs e)
         {
             duelGame.PickACard(2);
             ShowNewTable();
-            if (duelGame.speakPlayer == 2)
-            {
-                duelGame.TransformSpeakerPlayer();
-            }
         }
 
 
@@ -133,6 +128,7 @@ namespace duel
             Buttons.Buttons.Add(button20);
 
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 

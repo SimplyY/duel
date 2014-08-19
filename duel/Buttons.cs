@@ -14,5 +14,10 @@ namespace duel
         {
             Buttons.Add(button);
         }
+
+        public static void SendCardToDuel()
+        {
+
+        }
     }
 }

@@ -21,8 +21,6 @@ namespace duel
         CardsDuel cardDuel1;
         CardsDuel cardDuel2;
 
-
-
         //rule1: player1 get factoy1's cards.player2 get factoy2's cards.
         //rule2: the amount of cards is limited.
         public void PickACard(int playerButton)
@@ -43,11 +41,6 @@ namespace duel
 
         public void TransformSpeakerPlayer()
         {
-            if (speakPlayer != 1 && speakPlayer != 2)
-            {
-                speakPlayer = -1;
-
-            }
 
             if (speakPlayer == 1)
             {
@@ -100,7 +93,7 @@ namespace duel
                 sendedCard = new Card();
             }
         }
-         
+        
         private void SendACardToDuel()
         {
             Card sendedCard;

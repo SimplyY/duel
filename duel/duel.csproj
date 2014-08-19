@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buttons.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardsDuel.cs" />
     <Compile Include="CardsFactory.cs" />

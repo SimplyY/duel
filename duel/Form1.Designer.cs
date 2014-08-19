@@ -316,43 +316,48 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(164, 422);
+            this.button1.Location = new System.Drawing.Point(164, 421);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 20);
+            this.button1.Size = new System.Drawing.Size(52, 20);
             this.button1.TabIndex = 27;
+            this.button1.Text = "出牌";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(268, 422);
+            this.button2.Location = new System.Drawing.Point(268, 421);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 20);
+            this.button2.Size = new System.Drawing.Size(52, 20);
             this.button2.TabIndex = 28;
+            this.button2.Text = "出牌";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(375, 422);
+            this.button3.Location = new System.Drawing.Point(375, 421);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(34, 20);
+            this.button3.Size = new System.Drawing.Size(52, 20);
             this.button3.TabIndex = 29;
+            this.button3.Text = "出牌";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(482, 422);
+            this.button4.Location = new System.Drawing.Point(482, 421);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(34, 20);
+            this.button4.Size = new System.Drawing.Size(52, 20);
             this.button4.TabIndex = 30;
+            this.button4.Text = "出牌";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(586, 422);
+            this.button5.Location = new System.Drawing.Point(586, 421);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(34, 20);
+            this.button5.Size = new System.Drawing.Size(52, 20);
             this.button5.TabIndex = 31;
+            this.button5.Text = "出牌";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
@@ -437,42 +442,47 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(164, 34);
+            this.button16.Location = new System.Drawing.Point(164, 33);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(34, 20);
+            this.button16.Size = new System.Drawing.Size(52, 20);
             this.button16.TabIndex = 44;
+            this.button16.Text = "出牌";
             this.button16.UseVisualStyleBackColor = true;
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(268, 34);
+            this.button17.Location = new System.Drawing.Point(268, 33);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(34, 20);
+            this.button17.Size = new System.Drawing.Size(52, 20);
             this.button17.TabIndex = 43;
+            this.button17.Text = "出牌";
             this.button17.UseVisualStyleBackColor = true;
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(375, 34);
+            this.button18.Location = new System.Drawing.Point(375, 33);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(34, 20);
+            this.button18.Size = new System.Drawing.Size(52, 20);
             this.button18.TabIndex = 42;
+            this.button18.Text = "出牌";
             this.button18.UseVisualStyleBackColor = true;
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(482, 34);
+            this.button19.Location = new System.Drawing.Point(482, 33);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(34, 20);
+            this.button19.Size = new System.Drawing.Size(52, 20);
             this.button19.TabIndex = 46;
+            this.button19.Text = "出牌";
             this.button19.UseVisualStyleBackColor = true;
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(586, 34);
+            this.button20.Location = new System.Drawing.Point(586, 33);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(34, 20);
+            this.button20.Size = new System.Drawing.Size(52, 20);
             this.button20.TabIndex = 45;
+            this.button20.Text = "出牌";
             this.button20.UseVisualStyleBackColor = true;
             // 
             // Favtory1CardsAmountTextBox
@@ -540,7 +550,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(784, 441);
+            this.ClientSize = new System.Drawing.Size(787, 441);
             this.Controls.Add(this.playerBotton1);
             this.Controls.Add(this.showStatusBox);
             this.Controls.Add(this.playerLife1);
@@ -590,7 +600,7 @@
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("宋体", 9F);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "出牌";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -78,6 +78,8 @@
             this.showStatusBox = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.playerBotton1 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -302,7 +304,7 @@
             // 
             // PlayerBotton2
             // 
-            this.PlayerBotton2.Location = new System.Drawing.Point(56, 105);
+            this.PlayerBotton2.Location = new System.Drawing.Point(39, 77);
             this.PlayerBotton2.Name = "PlayerBotton2";
             this.PlayerBotton2.Size = new System.Drawing.Size(75, 22);
             this.PlayerBotton2.TabIndex = 26;
@@ -530,7 +532,7 @@
             // 
             // Favtory2CardsAmountTextBox
             // 
-            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(40, 141);
+            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(41, 135);
             this.Favtory2CardsAmountTextBox.Name = "Favtory2CardsAmountTextBox";
             this.Favtory2CardsAmountTextBox.ReadOnly = true;
             this.Favtory2CardsAmountTextBox.Size = new System.Drawing.Size(90, 21);
@@ -568,7 +570,7 @@
             // 
             // playerBotton1
             // 
-            this.playerBotton1.Location = new System.Drawing.Point(697, 312);
+            this.playerBotton1.Location = new System.Drawing.Point(680, 294);
             this.playerBotton1.Name = "playerBotton1";
             this.playerBotton1.Size = new System.Drawing.Size(75, 22);
             this.playerBotton1.TabIndex = 53;
@@ -576,12 +578,36 @@
             this.playerBotton1.UseVisualStyleBackColor = true;
             this.playerBotton1.Click += new System.EventHandler(this.playerBotton1_Click);
             // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(681, 322);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(74, 23);
+            this.button21.TabIndex = 54;
+            this.button21.Tag = "21";
+            this.button21.Text = "结束此回合";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(40, 105);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(75, 23);
+            this.button22.TabIndex = 55;
+            this.button22.Tag = "22";
+            this.button22.Text = "结束此回合";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(787, 441);
+            this.Controls.Add(this.button22);
+            this.Controls.Add(this.button21);
             this.Controls.Add(this.playerBotton1);
             this.Controls.Add(this.showStatusBox);
             this.Controls.Add(this.playerLife1);
@@ -689,6 +715,8 @@
         private System.Windows.Forms.TextBox playerLife2;
         private System.Windows.Forms.TextBox playerLife1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
     }
 }
 

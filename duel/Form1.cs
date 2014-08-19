@@ -126,7 +126,7 @@ namespace duel
             int tag = Convert.ToInt32(button.Tag);
             int duelNumber = 2;
             int cardIndex = getIndexFromTag(tag, duelNumber);
-            duelGame.SendACardToDuel(cardIndex ,duelNumber);
+            duelGame.SendACardToDuel(cardIndex, duelNumber);
 
             ShowNewTable();
         }
@@ -192,6 +192,16 @@ namespace duel
         private void button15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            duelGame.TransformSpeakerPlayer();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            duelGame.TransformSpeakerPlayer();
         }
 
 

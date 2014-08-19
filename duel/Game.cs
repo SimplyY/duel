@@ -100,6 +100,25 @@ namespace duel
                 sendedCard = new Card();
             }
         }
+         
+        private void SendACardToDuel()
+        {
+            Card sendedCard;
+            if (speakPlayer == 1)
+            {
+                sendedCard = cardManager1.PopACard();
+                cardDuel1.PushACard(sendedCard);
+            }
+            else if (speakPlayer == 2)
+            {
+                sendedCard = cardManager2.PopACard();
+                cardDuel2.PushACard(sendedCard);
+            }
+            else
+            {
+                sendedCard = new Card();
+            }
+        }
 
 
     }

@@ -90,7 +90,6 @@
             this.textBox1.Size = new System.Drawing.Size(103, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "无卡牌";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -135,7 +134,6 @@
             this.textBox5.Size = new System.Drawing.Size(103, 20);
             this.textBox5.TabIndex = 4;
             this.textBox5.Text = "无卡牌";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -235,7 +233,6 @@
             this.textBox14.Size = new System.Drawing.Size(103, 20);
             this.textBox14.TabIndex = 18;
             this.textBox14.Text = "无卡牌";
-            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // textBox15
             // 
@@ -247,7 +244,6 @@
             this.textBox15.Size = new System.Drawing.Size(103, 20);
             this.textBox15.TabIndex = 19;
             this.textBox15.Text = "无卡牌";
-            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // textBox16
             // 
@@ -322,6 +318,7 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "出牌";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.SendToDuel);
             // 
             // button2
             // 
@@ -331,6 +328,7 @@
             this.button2.TabIndex = 28;
             this.button2.Text = "出牌";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.SendToDuel);
             // 
             // button3
             // 
@@ -340,6 +338,7 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "出牌";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.SendToDuel);
             // 
             // button4
             // 
@@ -349,7 +348,7 @@
             this.button4.TabIndex = 30;
             this.button4.Text = "出牌";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.SendToDuel);
             // 
             // button5
             // 
@@ -359,6 +358,7 @@
             this.button5.TabIndex = 31;
             this.button5.Text = "出牌";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.SendToDuel);
             // 
             // button6
             // 
@@ -367,6 +367,7 @@
             this.button6.Size = new System.Drawing.Size(52, 20);
             this.button6.TabIndex = 32;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -375,6 +376,7 @@
             this.button7.Size = new System.Drawing.Size(52, 20);
             this.button7.TabIndex = 33;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -383,6 +385,7 @@
             this.button8.Size = new System.Drawing.Size(52, 20);
             this.button8.TabIndex = 34;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -391,6 +394,7 @@
             this.button9.Size = new System.Drawing.Size(52, 20);
             this.button9.TabIndex = 35;
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -399,6 +403,7 @@
             this.button10.Size = new System.Drawing.Size(52, 20);
             this.button10.TabIndex = 36;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -407,6 +412,7 @@
             this.button11.Size = new System.Drawing.Size(52, 20);
             this.button11.TabIndex = 37;
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -415,6 +421,7 @@
             this.button12.Size = new System.Drawing.Size(52, 20);
             this.button12.TabIndex = 38;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -423,6 +430,7 @@
             this.button13.Size = new System.Drawing.Size(52, 20);
             this.button13.TabIndex = 41;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -431,6 +439,7 @@
             this.button14.Size = new System.Drawing.Size(52, 20);
             this.button14.TabIndex = 40;
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -439,6 +448,7 @@
             this.button15.Size = new System.Drawing.Size(52, 20);
             this.button15.TabIndex = 39;
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button16
             // 
@@ -448,6 +458,7 @@
             this.button16.TabIndex = 44;
             this.button16.Text = "出牌";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
@@ -457,6 +468,7 @@
             this.button17.TabIndex = 43;
             this.button17.Text = "出牌";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -466,6 +478,7 @@
             this.button18.TabIndex = 42;
             this.button18.Text = "出牌";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -475,6 +488,7 @@
             this.button19.TabIndex = 46;
             this.button19.Text = "出牌";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
@@ -484,6 +498,7 @@
             this.button20.TabIndex = 45;
             this.button20.Text = "出牌";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // Favtory1CardsAmountTextBox
             // 
@@ -492,7 +507,6 @@
             this.Favtory1CardsAmountTextBox.ReadOnly = true;
             this.Favtory1CardsAmountTextBox.Size = new System.Drawing.Size(90, 21);
             this.Favtory1CardsAmountTextBox.TabIndex = 47;
-            this.Favtory1CardsAmountTextBox.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             // 
             // Favtory2CardsAmountTextBox
             // 
@@ -510,7 +524,6 @@
             this.playerLife2.Size = new System.Drawing.Size(97, 21);
             this.playerLife2.TabIndex = 49;
             this.playerLife2.Text = "8000";
-            this.playerLife2.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
             // 
             // playerLife1
             // 
@@ -520,7 +533,6 @@
             this.playerLife1.Size = new System.Drawing.Size(97, 21);
             this.playerLife1.TabIndex = 51;
             this.playerLife1.Text = "8000";
-            this.playerLife1.TextChanged += new System.EventHandler(this.playerLife1_TextChanged);
             // 
             // showStatusBox
             // 
@@ -529,7 +541,6 @@
             this.showStatusBox.Size = new System.Drawing.Size(134, 21);
             this.showStatusBox.TabIndex = 52;
             this.showStatusBox.Text = "游戏状态未初始化";
-            this.showStatusBox.TextChanged += new System.EventHandler(this.showStatusBox_TextChanged);
             // 
             // timer1
             // 

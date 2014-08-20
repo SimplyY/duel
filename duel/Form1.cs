@@ -49,7 +49,7 @@ namespace duel
             GameStatus.SetStatusInfo(status);
         }
 
-        private void InitGame()
+        public void InitGame()
         {
             timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
             timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期

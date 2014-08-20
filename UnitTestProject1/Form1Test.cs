@@ -93,6 +93,8 @@ namespace UnitTestProject1
 
             Form1 target = new Form1(); // TODO: 初始化为适当的值
 
+            target.InitGame();
+
             CardsManager cardManager1 = target.duelGame.cardManager1;
             CardsManager cardManager2 = target.duelGame.cardManager2;
             BuiltActualCardsInfo(cardManager1, cardsManager1Amount, info1, info2);
@@ -119,6 +121,8 @@ namespace UnitTestProject1
 
         private void BuiltActualCardsInfo(CardsManager owner, int cardsAmount, string info1, int info2)
         {
+            owner.cards.Clear();
+
             for (int i = 0; i < cardsAmount; i++)
             {
                 info2++;

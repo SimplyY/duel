@@ -82,15 +82,11 @@ namespace UnitTestProject1
         [TestMethod()]
         public void ShowCardsAmountTest()
         {
-            string expectedCardsAmount = "剩余卡牌数：9";
-            int pickCardTimes = 1;
+            string expectedCardsAmount = "剩余卡牌数：5";
 
             Form1 targetForm = new Form1();
+            targetForm.InitGame();
             CardsFactory target = targetForm.duelGame.cardFactory1;
-            if (pickCardTimes == 1)
-            {
-                targetForm.duelGame.PickACard(1);
-            }
             target.ShowCardsAmount();
             string actualCardsAmount = DuelTextBoxs.Boxes[20].Text;
 

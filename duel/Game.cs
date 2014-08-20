@@ -136,7 +136,5 @@ namespace duel
                 sendedCard = new Card();
             }
         }
-
-
     }
 }

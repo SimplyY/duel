@@ -9,7 +9,6 @@ namespace duel
     public class CardsManager
     {
         public int number;
-        public int pickCardsAmount;
         public int theBeginIndexOfBoxes { get; set; }
         public List<Card> cards { get; private set; }
 

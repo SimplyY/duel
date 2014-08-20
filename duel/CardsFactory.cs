@@ -10,6 +10,8 @@ namespace duel
     public class CardsFactory
     {
         public int FactoryNumber;
+        public int pickCardsAmount;
+
         public List<Card> cards;
 
         private string cardsInfoFileLocation;
@@ -50,6 +52,7 @@ namespace duel
             {
                 PopedCard = cards[0];
                 cards.RemoveAt(0);
+                --pickCardsAmount;
                 return PopedCard;
             }
             else

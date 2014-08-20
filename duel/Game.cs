@@ -44,10 +44,12 @@ namespace duel
 
             if (speakPlayer == 1)
             {
+                cardFactory2.pickCardsAmount = 1;
                 speakPlayer = 2;
             }
             else if (speakPlayer == 2)
             {
+                cardFactory1.pickCardsAmount = 1;
                 speakPlayer = 1;
             }
         }
@@ -71,11 +73,12 @@ namespace duel
 
             cardFactory1.ShowCardsAmount();
             cardFactory2.ShowCardsAmount();
-            InitManager();
+
+            InitStart();
             speakPlayer = 1;
         }
 
-        private void InitManager()
+        private void InitStart()
         {
             for (int i = 0; i < 5; i++)
             {
@@ -86,21 +89,19 @@ namespace duel
                 sendedCard = cardFactory2.PopACard();
                 cardManager2.PushACard(sendedCard);
             }
-
-
-            cardManager1.pickCardsAmount = 1;
-            cardManager2.pickCardsAmount = 0;
+            cardFactory1.pickCardsAmount = 0;
+            cardFactory2.pickCardsAmount = 0;
         }
 
         private void SendACardToManager()
         {
             Card sendedCard;
-            if (speakPlayer == 1)
+            if (speakPlayer == 1 && cardFactory1.pickCardsAmount >= 1)
             {
                 sendedCard = cardFactory1.PopACard();
                 cardManager1.PushACard(sendedCard);
             }
-            else if (speakPlayer == 2)
+            else if (speakPlayer == 2 && cardFactory2.pickCardsAmount >= 1)
             {
                 sendedCard = cardFactory2.PopACard();
                 cardManager2.PushACard(sendedCard);
@@ -116,13 +117,19 @@ namespace duel
             Card sendedCard;
             if (speakPlayer == 1 && duelNumber == 1)
             {
-                sendedCard = cardManager1.SendACard(cardIndex);
-                cardDuel1.PushACard(sendedCard);
+                if (cardIndex <= (cardManager1.cards.Count - 1))
+                {
+                    sendedCard = cardManager1.SendACard(cardIndex);
+                    cardDuel1.PushACard(sendedCard);
+                }
             }
             else if (speakPlayer == 2 && duelNumber == 2)
             {
-                sendedCard = cardManager2.SendACard(cardIndex);
-                cardDuel2.PushACard(sendedCard);
+                if (cardIndex <= (cardManager2.cards.Count - 1))
+                {
+                    sendedCard = cardManager2.SendACard(cardIndex);
+                    cardDuel2.PushACard(sendedCard);
+                }
             }
             else
             {

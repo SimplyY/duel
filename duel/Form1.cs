@@ -14,11 +14,15 @@ namespace duel
     {
         public Game duelGame { get; set; }
 
-
         public Form1()
         {
             InitializeComponent();
             InitDuelTextBox();
+            Game.InitRecentCard();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
 
@@ -47,36 +51,6 @@ namespace duel
         {
             string status = "玩家" + Convert.ToString(duelGame.speakPlayer) + "的回合";
             GameStatus.SetStatusInfo(status);
-        }
-
-        public void InitGame()
-        {
-            timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
-            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
-
-            duelGame = new Game();
-        }
-
-
-        private void StartGame(object sender, EventArgs e)
-        {
-            Button startGameButton = (Button)sender;
-
-            InitGame();
-            ShowNewTable();
-            startGameButton.Text = "游戏已经开始";
-        }
-
-        private void playerBotton1_Click(object sender, EventArgs e)
-        {
-            duelGame.PickACard(1);
-            ShowNewTable();
-        }
-
-        private void PlayerBotton2_Click(object sender, EventArgs e)
-        {
-            duelGame.PickACard(2);
-            ShowNewTable();
         }
 
         private void InitDuelTextBox()
@@ -109,9 +83,35 @@ namespace duel
             DuelTextBoxs.Boxes.Add(Favtory2CardsAmountTextBox);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
+        public void InitGame()
+        {
+            timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
+            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
+
+            duelGame = new Game();
+        }
+
+
+        private void StartGame(object sender, EventArgs e)
+        {
+            Button startGameButton = (Button)sender;
+
+            InitGame();
+            ShowNewTable();
+            startGameButton.Text = "游戏已经开始";
+        }
+
+        private void playerBotton1_Click(object sender, EventArgs e)
+        {
+            duelGame.PickACard(1);
+            ShowNewTable();
+        }
+
+        private void PlayerBotton2_Click(object sender, EventArgs e)
+        {
+            duelGame.PickACard(2);
+            ShowNewTable();
         }
 
         private void SendToDuel1_Click(object sender, EventArgs e)
@@ -155,9 +155,13 @@ namespace duel
             duelGame.TransformSpeakerPlayer();
         }
 
-        private void toBeDenfend_Click(object sender, EventArgs e)
+        private void ChangeStateToDefend_Click(object sender, EventArgs e)
         {
-
+            if (Game.recentDuelCard.status != "空")
+            {
+                Game.recentDuelCard.status = "防守表示";
+                ShowNewTable();
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)

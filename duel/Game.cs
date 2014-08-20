@@ -10,6 +10,9 @@ namespace duel
     public class Game
     {
         public int speakPlayer { get; set; }
+
+        public static Card recentDuelCard;
+
         public bool hasError;
 
         public CardsFactory cardFactory1 { get; private set; }
@@ -58,6 +61,13 @@ namespace duel
         {
             InitializeGame();
         }
+
+        public static void InitRecentCard()
+        {
+            recentDuelCard = new Card();
+            recentDuelCard.status = "空";
+        }
+
         private void InitializeGame()
         {
             GameStatus.SetStatusInfo("游戏已经开始");
@@ -120,7 +130,10 @@ namespace duel
                 if (cardIndex <= (cardManager1.cards.Count - 1))
                 {
                     sendedCard = cardManager1.SendACard(cardIndex);
+                    sendedCard.status = "攻击表示";
                     cardDuel1.PushACard(sendedCard);
+
+                    recentDuelCard = sendedCard;
                 }
             }
             else if (speakPlayer == 2 && duelNumber == 2)
@@ -128,7 +141,10 @@ namespace duel
                 if (cardIndex <= (cardManager2.cards.Count - 1))
                 {
                     sendedCard = cardManager2.SendACard(cardIndex);
+                    sendedCard.status = "攻击表示";
                     cardDuel2.PushACard(sendedCard);
+
+                    recentDuelCard = sendedCard;
                 }
             }
             else

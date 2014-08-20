@@ -20,7 +20,6 @@ namespace duel
             InitializeComponent();
             InitDuelTextBox();
 
-            InitGame();
         }
 
         public void ShowNewTable()
@@ -56,6 +55,16 @@ namespace duel
             timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
 
             duelGame = new Game();
+        }
+
+
+        private void StartGame(object sender, EventArgs e)
+        {
+            Button startGameButton = (Button)sender;
+
+            InitGame();
+            ShowNewTable();
+            startGameButton.Text = "游戏已经开始";
         }
 
         private void playerBotton1_Click(object sender, EventArgs e)
@@ -199,9 +208,6 @@ namespace duel
         {
             duelGame.TransformSpeakerPlayer();
         }
-
-
-
 
 
     }

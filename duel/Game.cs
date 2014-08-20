@@ -28,11 +28,11 @@ namespace duel
 
             if (playerButton == speakPlayer)
             {
-                if (playerButton == 1 && cardManager1.cards.Count <= 4 && cardFactory1.cards.Count > 0)
+                if (playerButton == 1 && cardManager1.cards.Count <= 4 && cardFactory1.cards.Count >= 1)
                 {
                     SendACardToManager();
                 }
-                else if (playerButton == 2 && cardManager2.cards.Count <= 4 && cardFactory2.cards.Count > 0)
+                else if (playerButton == 2 && cardManager2.cards.Count <= 4 && cardFactory2.cards.Count >= 1)
                 {
                     SendACardToManager();
                 }
@@ -71,8 +71,25 @@ namespace duel
 
             cardFactory1.ShowCardsAmount();
             cardFactory2.ShowCardsAmount();
-
+            InitManager();
             speakPlayer = 1;
+        }
+
+        private void InitManager()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Card sendedCard;
+                sendedCard = cardFactory1.PopACard();
+                cardManager1.PushACard(sendedCard);
+
+                sendedCard = cardFactory2.PopACard();
+                cardManager2.PushACard(sendedCard);
+            }
+
+
+            cardManager1.pickCardsAmount = 1;
+            cardManager2.pickCardsAmount = 0;
         }
 
         private void SendACardToManager()

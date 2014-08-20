@@ -81,22 +81,6 @@ namespace UnitTestProject1
         }
 
         /// <summary>
-        ///TransformSpeakerPlayer 的测试
-        ///</summary>
-        [TestMethod()]
-        public void TransformSpeakerPlayerTest1()
-        {
-            int expected = -1;
-
-            Game target = new Game();
-            target.speakPlayer = 123;
-            target.TransformSpeakerPlayer();
-
-            int actual = target.speakPlayer;
-            Assert.AreEqual(expected, actual);
-        }
-
-        /// <summary>
         ///PickACard 的测试for player1
         ///</summary>
         [TestMethod()]

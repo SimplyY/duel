@@ -81,6 +81,7 @@
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
+            this.toBeDenfend = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -322,7 +323,7 @@
             this.button1.Tag = "1";
             this.button1.Text = "出牌";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.SendToDuel1);
+            this.button1.Click += new System.EventHandler(this.SendToDuel1_Click);
             // 
             // button2
             // 
@@ -333,7 +334,7 @@
             this.button2.Tag = "2";
             this.button2.Text = "出牌";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.SendToDuel1);
+            this.button2.Click += new System.EventHandler(this.SendToDuel1_Click);
             // 
             // button3
             // 
@@ -344,7 +345,7 @@
             this.button3.Tag = "3";
             this.button3.Text = "出牌";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.SendToDuel1);
+            this.button3.Click += new System.EventHandler(this.SendToDuel1_Click);
             // 
             // button4
             // 
@@ -355,7 +356,7 @@
             this.button4.Tag = "4";
             this.button4.Text = "出牌";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.SendToDuel1);
+            this.button4.Click += new System.EventHandler(this.SendToDuel1_Click);
             // 
             // button5
             // 
@@ -366,7 +367,7 @@
             this.button5.Tag = "5";
             this.button5.Text = "出牌";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.SendToDuel1);
+            this.button5.Click += new System.EventHandler(this.SendToDuel1_Click);
             // 
             // button6
             // 
@@ -477,7 +478,7 @@
             this.button16.Tag = "16";
             this.button16.Text = "出牌";
             this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.SendToDuel2);
+            this.button16.Click += new System.EventHandler(this.SendToDuel2_Click);
             // 
             // button17
             // 
@@ -488,7 +489,7 @@
             this.button17.Tag = "17";
             this.button17.Text = "出牌";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.SendToDuel2);
+            this.button17.Click += new System.EventHandler(this.SendToDuel2_Click);
             // 
             // button18
             // 
@@ -499,7 +500,7 @@
             this.button18.Tag = "18";
             this.button18.Text = "出牌";
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.SendToDuel2);
+            this.button18.Click += new System.EventHandler(this.SendToDuel2_Click);
             // 
             // button19
             // 
@@ -510,7 +511,7 @@
             this.button19.Tag = "19";
             this.button19.Text = "出牌";
             this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.SendToDuel2);
+            this.button19.Click += new System.EventHandler(this.SendToDuel2_Click);
             // 
             // button20
             // 
@@ -521,7 +522,7 @@
             this.button20.Tag = "20";
             this.button20.Text = "出牌";
             this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.SendToDuel2);
+            this.button20.Click += new System.EventHandler(this.SendToDuel2_Click);
             // 
             // Favtory1CardsAmountTextBox
             // 
@@ -599,7 +600,7 @@
             this.button22.Tag = "22";
             this.button22.Text = "结束此回合";
             this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.button22.Click += new System.EventHandler(this.endSpeak_Click);
             // 
             // button23
             // 
@@ -611,12 +612,23 @@
             this.button23.UseVisualStyleBackColor = true;
             this.button23.Click += new System.EventHandler(this.StartGame);
             // 
+            // toBeDenfend
+            // 
+            this.toBeDenfend.Location = new System.Drawing.Point(34, 312);
+            this.toBeDenfend.Name = "toBeDenfend";
+            this.toBeDenfend.Size = new System.Drawing.Size(97, 60);
+            this.toBeDenfend.TabIndex = 57;
+            this.toBeDenfend.Text = "  点击这                      刚出牌怪兽将更改为防守状态";
+            this.toBeDenfend.UseVisualStyleBackColor = true;
+            this.toBeDenfend.Click += new System.EventHandler(this.toBeDenfend_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(787, 441);
+            this.Controls.Add(this.toBeDenfend);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
@@ -730,6 +742,7 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button toBeDenfend;
     }
 }
 

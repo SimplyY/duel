@@ -114,7 +114,7 @@ namespace duel
 
         }
 
-        private void SendToDuel1(object sender, EventArgs e)
+        private void SendToDuel1_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             int tag = Convert.ToInt32(button.Tag);
@@ -125,7 +125,7 @@ namespace duel
             ShowNewTable();
         }
 
-        private void SendToDuel2(object sender, EventArgs e)
+        private void SendToDuel2_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             int tag = Convert.ToInt32(button.Tag);
@@ -147,6 +147,17 @@ namespace duel
                 return tag - 16;
             }
             return -1;
+        }
+
+
+        private void endSpeak_Click(object sender, EventArgs e)
+        {
+            duelGame.TransformSpeakerPlayer();
+        }
+
+        private void toBeDenfend_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -204,10 +215,9 @@ namespace duel
             duelGame.TransformSpeakerPlayer();
         }
 
-        private void button22_Click(object sender, EventArgs e)
-        {
-            duelGame.TransformSpeakerPlayer();
-        }
+
+
+
 
 
     }

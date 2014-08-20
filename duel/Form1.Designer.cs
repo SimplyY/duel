@@ -553,7 +553,7 @@
             this.playerLife1.Location = new System.Drawing.Point(675, 12);
             this.playerLife1.Name = "playerLife1";
             this.playerLife1.ReadOnly = true;
-            this.playerLife1.Size = new System.Drawing.Size(97, 21);
+            this.playerLife1.Size = new System.Drawing.Size(96, 21);
             this.playerLife1.TabIndex = 51;
             this.playerLife1.Text = "8000";
             // 
@@ -605,7 +605,7 @@
             // 
             this.button23.Location = new System.Drawing.Point(675, 212);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
+            this.button23.Size = new System.Drawing.Size(96, 23);
             this.button23.TabIndex = 56;
             this.button23.Text = "开始游戏";
             this.button23.UseVisualStyleBackColor = true;

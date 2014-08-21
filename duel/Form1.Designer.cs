@@ -312,7 +312,7 @@
             this.PlayerBotton2.TabIndex = 26;
             this.PlayerBotton2.Text = "玩家2起牌";
             this.PlayerBotton2.UseVisualStyleBackColor = true;
-            this.PlayerBotton2.Click += new System.EventHandler(this.PlayerBotton2_Click);
+            this.PlayerBotton2.Click += new System.EventHandler(this.Player2PickACard_Click);
             // 
             // button1
             // 
@@ -373,101 +373,111 @@
             // 
             this.button6.Location = new System.Drawing.Point(164, 312);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(52, 20);
+            this.button6.Size = new System.Drawing.Size(65, 20);
             this.button6.TabIndex = 32;
-            this.button6.Tag = "6";
+            this.button6.Tag = "0";
+            this.button6.Text = "选中此卡";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(268, 312);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(52, 20);
+            this.button7.Size = new System.Drawing.Size(65, 20);
             this.button7.TabIndex = 33;
-            this.button7.Tag = "7";
+            this.button7.Tag = "1";
+            this.button7.Text = "选中此卡";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(375, 312);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(52, 20);
+            this.button8.Size = new System.Drawing.Size(65, 20);
             this.button8.TabIndex = 34;
-            this.button8.Tag = "8";
+            this.button8.Tag = "2";
+            this.button8.Text = "选中此卡";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(482, 312);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(52, 20);
+            this.button9.Size = new System.Drawing.Size(65, 20);
             this.button9.TabIndex = 35;
-            this.button9.Tag = "9";
+            this.button9.Tag = "3";
+            this.button9.Text = "选中此卡";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(586, 312);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(52, 20);
+            this.button10.Size = new System.Drawing.Size(65, 20);
             this.button10.TabIndex = 36;
-            this.button10.Tag = "10";
+            this.button10.Tag = "4";
+            this.button10.Text = "选中此卡";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(164, 134);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(52, 20);
+            this.button11.Size = new System.Drawing.Size(65, 20);
             this.button11.TabIndex = 37;
-            this.button11.Tag = "11";
+            this.button11.Tag = "0";
+            this.button11.Text = "选中此卡";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(268, 134);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(52, 20);
+            this.button12.Size = new System.Drawing.Size(65, 20);
             this.button12.TabIndex = 38;
-            this.button12.Tag = "12";
+            this.button12.Tag = "1";
+            this.button12.Text = "选中此卡";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button12.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(375, 134);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(52, 20);
+            this.button13.Size = new System.Drawing.Size(65, 20);
             this.button13.TabIndex = 41;
-            this.button13.Tag = "13";
+            this.button13.Tag = "2";
+            this.button13.Text = "选中此卡";
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button13.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
             // button14
             // 
             this.button14.Location = new System.Drawing.Point(482, 134);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(52, 20);
+            this.button14.Size = new System.Drawing.Size(65, 20);
             this.button14.TabIndex = 40;
-            this.button14.Tag = "14";
+            this.button14.Tag = "3";
+            this.button14.Text = "选中此卡";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
             // button15
             // 
             this.button15.Location = new System.Drawing.Point(586, 134);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(52, 20);
+            this.button15.Size = new System.Drawing.Size(65, 20);
             this.button15.TabIndex = 39;
-            this.button15.Tag = "15";
+            this.button15.Tag = "4";
+            this.button15.Text = "选中此卡";
             this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
             // button16
             // 
@@ -576,7 +586,7 @@
             this.playerBotton1.TabIndex = 53;
             this.playerBotton1.Text = "玩家1起牌";
             this.playerBotton1.UseVisualStyleBackColor = true;
-            this.playerBotton1.Click += new System.EventHandler(this.playerBotton1_Click);
+            this.playerBotton1.Click += new System.EventHandler(this.player1PickACard_Click);
             // 
             // button21
             // 
@@ -587,7 +597,7 @@
             this.button21.Tag = "21";
             this.button21.Text = "结束此回合";
             this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.button21.Click += new System.EventHandler(this.TansSpeakerPlayerButton_Click);
             // 
             // button22
             // 
@@ -612,11 +622,11 @@
             // 
             // toBeDenfend
             // 
-            this.toBeDenfend.Location = new System.Drawing.Point(39, 210);
+            this.toBeDenfend.Location = new System.Drawing.Point(41, 237);
             this.toBeDenfend.Name = "toBeDenfend";
-            this.toBeDenfend.Size = new System.Drawing.Size(97, 60);
+            this.toBeDenfend.Size = new System.Drawing.Size(90, 33);
             this.toBeDenfend.TabIndex = 57;
-            this.toBeDenfend.Text = "  点击这                      刚出牌怪兽将更改为防守状态";
+            this.toBeDenfend.Text = "点击更改选中的怪兽卡状态";
             this.toBeDenfend.UseVisualStyleBackColor = true;
             this.toBeDenfend.Click += new System.EventHandler(this.ChangeStateToDefend_Click);
             // 
@@ -625,7 +635,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(787, 441);
+            this.ClientSize = new System.Drawing.Size(800, 441);
             this.Controls.Add(this.toBeDenfend);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
@@ -679,7 +689,7 @@
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("宋体", 9F);
             this.Name = "Form1";
-            this.Text = "出牌";
+            this.Text = "选中此卡";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -13,9 +13,13 @@ namespace duel
     public partial class Form1 : Form
     {
         public Game duelGame { get; set; }
+        private bool gameHasStarted;
+
+        private Button beforeChosenButton;
 
         public Form1()
         {
+            gameHasStarted = false;
             InitializeComponent();
             InitDuelTextBox();
             Game.InitRecentCard();
@@ -92,6 +96,7 @@ namespace duel
             timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
 
             duelGame = new Game();
+            gameHasStarted = true;
         }
 
 
@@ -104,38 +109,50 @@ namespace duel
             startGameButton.Text = "游戏已经开始";
         }
 
-        private void playerBotton1_Click(object sender, EventArgs e)
+        private void player1PickACard_Click(object sender, EventArgs e)
         {
-            duelGame.PickACard(1);
-            ShowNewTable();
+            if (gameHasStarted == true)
+            {
+                duelGame.PickACard(1);
+                ShowNewTable();
+            }
         }
 
-        private void PlayerBotton2_Click(object sender, EventArgs e)
+        private void Player2PickACard_Click(object sender, EventArgs e)
         {
-            duelGame.PickACard(2);
-            ShowNewTable();
+            if (gameHasStarted == true)
+            {
+                duelGame.PickACard(2);
+                ShowNewTable();
+            }
         }
 
         private void SendToDuel1_Click(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
-            int tag = Convert.ToInt32(button.Tag);
-            int duelNumber = 1;
-            int cardIndex = getIndexFromTag(tag, duelNumber);
-            duelGame.SendACardToDuel(cardIndex, duelNumber);
+            if (gameHasStarted == true)
+            {
+                Button button = (Button)sender;
+                int tag = Convert.ToInt32(button.Tag);
+                int duelNumber = 1;
+                int cardIndex = getIndexFromTag(tag, duelNumber);
+                duelGame.SendACardToDuel(cardIndex, duelNumber);
 
-            ShowNewTable();
+                ShowNewTable();
+            }
         }
 
         private void SendToDuel2_Click(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
-            int tag = Convert.ToInt32(button.Tag);
-            int duelNumber = 2;
-            int cardIndex = getIndexFromTag(tag, duelNumber);
-            duelGame.SendACardToDuel(cardIndex, duelNumber);
+            if (gameHasStarted == true)
+            {
+                Button button = (Button)sender;
+                int tag = Convert.ToInt32(button.Tag);
+                int duelNumber = 2;
+                int cardIndex = getIndexFromTag(tag, duelNumber);
+                duelGame.SendACardToDuel(cardIndex, duelNumber);
 
-            ShowNewTable();
+                ShowNewTable();
+            }
         }
 
         private int getIndexFromTag(int tag, int duelNumber)
@@ -151,80 +168,114 @@ namespace duel
             return -1;
         }
 
+        private void DuelButton1_Click(object sender, EventArgs e)
+        {
+            if (gameHasStarted == true)
+            {
+                if (duelGame.speakPlayer == 1)
+                {
+                    Button button = (Button)sender;
+                    int cardIndex = Convert.ToInt32(button.Tag);
+                    if (cardIndex < duelGame.cardDuel1.cards.Count)
+                    {
+                        Card beforeChosenCard = Game.recentDuelCardAttack;
+                        if (beforeChosenCard.hasBeenChosen == true)
+                        {
+                            InitBeforeButton(beforeChosenButton);
+                        }
+
+                        Game.recentDuelCardAttack = duelGame.cardDuel1.cards[cardIndex];
+                        button.Text = "已被选中";
+                        beforeChosenButton = button;
+
+                        Game.recentDuelCardAttack.hasBeenChosen = true;
+                    }
+                }
+                else if (duelGame.speakPlayer == 2 && Game.recentDuelCardAttack.hasBeenChosen == true)
+                {
+                    Button button = (Button)sender;
+                    int cardIndex = Convert.ToInt32(button.Tag);
+                    if (cardIndex < duelGame.cardDuel2.cards.Count)
+                    {
+                        Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
+                        Game.recentDuelCardAttacked.hasBeenChosen = true;
+                        button.Text = "已被选中";
+                    }
+                    
+                }
+            }
+        }
+
+        private void DuelButton2_Click(object sender, EventArgs e)
+        {
+            if (gameHasStarted == true)
+            {
+                if (duelGame.speakPlayer == 2)
+                {
+                    Button button = (Button)sender;
+                    int cardIndex = Convert.ToInt32(button.Tag);
+                    if (cardIndex < duelGame.cardDuel2.cards.Count)
+                    {
+                        Game.recentDuelCardAttack = duelGame.cardDuel2.cards[cardIndex];
+                        button.Text = "已被选中";
+                        Game.recentDuelCardAttack.hasBeenChosen = true;
+                    }
+                }
+                else if (duelGame.speakPlayer == 1 && Game.recentDuelCardAttack.hasBeenChosen == true)
+                {
+                    Button button = (Button)sender;
+                    int cardIndex = Convert.ToInt32(button.Tag);
+                    if (cardIndex < duelGame.cardDuel2.cards.Count)
+                    {
+                        Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
+                        Game.recentDuelCardAttacked.hasBeenChosen = true;
+                        button.Text = "已被选中";
+                    }
+
+                }
+                
+            }
+
+        }
+
+        private void InitBeforeButton(Button beforeButton)
+        {
+            beforeButton.Text = "点击选中";
+
+        }
 
         private void endSpeak_Click(object sender, EventArgs e)
         {
-            duelGame.TransformSpeakerPlayer();
+            if (gameHasStarted == true)
+            {
+                duelGame.TransformSpeakerPlayer();
+            }
         }
 
         private void ChangeStateToDefend_Click(object sender, EventArgs e)
         {
-            if (Game.recentDuelCard.status != "空")
+            if (gameHasStarted == true && Game.recentDuelCardAttack.status != "空")
             {
-                Game.recentDuelCard.status = "防守表示";
+                if (Game.recentDuelCardAttack.status == "攻击表示")
+                {
+                    Game.recentDuelCardAttack.status = "防守表示";
+                }
+                else if (Game.recentDuelCardAttack.status == "防守表示")
+                {
+                    Game.recentDuelCardAttack.status = "攻击表示";
+                }
+
                 ShowNewTable();
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void TansSpeakerPlayerButton_Click(object sender, EventArgs e)
         {
-
+            if (gameHasStarted == true)
+            {
+                duelGame.TransformSpeakerPlayer();
+            }
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button21_Click(object sender, EventArgs e)
-        {
-            duelGame.TransformSpeakerPlayer();
-        }
-
-
-
-
-
 
     }
 }

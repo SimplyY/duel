@@ -25,6 +25,7 @@ namespace duel
         public string showInfo { get; set; }
 
         public string status { get; set; }
+        public bool hasBeenChosen;
 
         public string cardPackage { get; set; }
         public string japanName { get; set; }

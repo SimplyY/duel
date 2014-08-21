@@ -23,5 +23,11 @@ namespace duel
                 DuelTextBoxs.Boxes[i + boxesBeginIndex].Height = 20;
             }
         }
+
+        public static void ShowPlayersLife(int player1Life, int player2Life)
+        {
+            DuelTextBoxs.Boxes[22].Text = Convert.ToString(player1Life);
+            DuelTextBoxs.Boxes[23].Text = Convert.ToString(player2Life);
+        }
     }
 }

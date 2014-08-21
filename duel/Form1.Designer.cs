@@ -547,7 +547,6 @@
             this.playerLife2.ReadOnly = true;
             this.playerLife2.Size = new System.Drawing.Size(97, 21);
             this.playerLife2.TabIndex = 49;
-            this.playerLife2.Text = "8000";
             // 
             // playerLife1
             // 
@@ -556,7 +555,6 @@
             this.playerLife1.ReadOnly = true;
             this.playerLife1.Size = new System.Drawing.Size(96, 21);
             this.playerLife1.TabIndex = 51;
-            this.playerLife1.Text = "8000";
             // 
             // showStatusBox
             // 

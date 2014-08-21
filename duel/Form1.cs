@@ -28,13 +28,13 @@ namespace duel
 
         public void ShowNewTable()
         {
+            duelGame.Show();
             duelGame.cardFactory1.ShowCardsAmount();
             duelGame.cardFactory2.ShowCardsAmount();
             duelGame.cardManager1.Show();
             duelGame.cardManager2.Show();
             duelGame.cardDuel1.Show();
             duelGame.cardDuel2.Show();
-
         }
 
         public void timer1_Tick(object sender, EventArgs e)
@@ -78,9 +78,11 @@ namespace duel
             DuelTextBoxs.Boxes.Add(textBox19);
             DuelTextBoxs.Boxes.Add(textBox20);
 
-
             DuelTextBoxs.Boxes.Add(Favtory1CardsAmountTextBox);
             DuelTextBoxs.Boxes.Add(Favtory2CardsAmountTextBox);
+
+            DuelTextBoxs.Boxes.Add(playerLife1);
+            DuelTextBoxs.Boxes.Add(playerLife2);
         }
 
 

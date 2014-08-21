@@ -11,6 +11,9 @@ namespace duel
     {
         public int speakPlayer { get; set; }
 
+        public int player1Life;
+        public int player2Life;
+
         public static Card recentDuelCard;
 
         public bool hasError;
@@ -62,6 +65,11 @@ namespace duel
             InitializeGame();
         }
 
+        public void Show()
+        {
+            DuelTextBoxs.ShowPlayersLife(player2Life, player2Life);
+        }
+
         public static void InitRecentCard()
         {
             recentDuelCard = new Card();
@@ -71,6 +79,9 @@ namespace duel
         private void InitializeGame()
         {
             GameStatus.SetStatusInfo("游戏已经开始");
+
+            player1Life = 4000;
+            player2Life = 4000;
 
             cardFactory1 = new CardsFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 1);
             cardFactory2 = new CardsFactory("C:\\Users\\yuwei\\Desktop\\编程文件\\c++&c#\\duel\\duel\\duelInfo.txt", 2);

@@ -12,7 +12,7 @@ namespace duel
 
         public void RemoveCard(Card removedCard)
         {
-
+            cards.Remove(removedCard);
         }
     }
 }

@@ -590,7 +590,7 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(697, 237);
+            this.button21.Location = new System.Drawing.Point(696, 199);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(74, 23);
             this.button21.TabIndex = 54;
@@ -601,9 +601,9 @@
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(696, 199);
+            this.button23.Location = new System.Drawing.Point(696, 122);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(96, 23);
+            this.button23.Size = new System.Drawing.Size(75, 48);
             this.button23.TabIndex = 56;
             this.button23.Text = "开始游戏";
             this.button23.UseVisualStyleBackColor = true;
@@ -611,9 +611,9 @@
             // 
             // toBeDenfend
             // 
-            this.toBeDenfend.Location = new System.Drawing.Point(34, 237);
+            this.toBeDenfend.Location = new System.Drawing.Point(34, 250);
             this.toBeDenfend.Name = "toBeDenfend";
-            this.toBeDenfend.Size = new System.Drawing.Size(90, 33);
+            this.toBeDenfend.Size = new System.Drawing.Size(90, 46);
             this.toBeDenfend.TabIndex = 57;
             this.toBeDenfend.Text = "点击更改选中的怪兽卡状态";
             this.toBeDenfend.UseVisualStyleBackColor = true;

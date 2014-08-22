@@ -102,11 +102,14 @@ namespace duel
 
         private void StartGame(object sender, EventArgs e)
         {
-            Button startGameButton = (Button)sender;
+            if (gameHasStarted == false)
+            {
+                Button startGameButton = (Button)sender;
 
-            InitGame();
-            ShowNewTable();
-            startGameButton.Text = "游戏已经开始";
+                InitGame();
+                ShowNewTable();
+                startGameButton.Text = "游戏已经开始";
+            }
         }
 
         private void player1PickACard_Click(object sender, EventArgs e)
@@ -306,7 +309,7 @@ namespace duel
 
         private void duelButton_Click(object sender, EventArgs e)
         {
-            if(gameHasStarted == true)
+            if (gameHasStarted == true)
             {
                 if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked != null && Game.recentDuelCardAttack.status == "攻击状态")
                 {

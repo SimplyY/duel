@@ -306,10 +306,13 @@ namespace duel
 
         private void duelButton_Click(object sender, EventArgs e)
         {
-            if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked != null)
+            if(gameHasStarted == true)
             {
-                duelGame.Duel();
-                ShowNewTable();
+                if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked != null && Game.recentDuelCardAttack.status == "攻击状态")
+                {
+                    duelGame.Duel();
+                    ShowNewTable();
+                }
             }
         }
 

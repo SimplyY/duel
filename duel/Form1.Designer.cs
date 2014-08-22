@@ -376,7 +376,7 @@
             this.button6.Size = new System.Drawing.Size(65, 20);
             this.button6.TabIndex = 32;
             this.button6.Tag = "0";
-            this.button6.Text = "选中此卡";
+            this.button6.Text = "点击选中";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
@@ -387,7 +387,7 @@
             this.button7.Size = new System.Drawing.Size(65, 20);
             this.button7.TabIndex = 33;
             this.button7.Tag = "1";
-            this.button7.Text = "选中此卡";
+            this.button7.Text = "点击选中";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
@@ -398,7 +398,7 @@
             this.button8.Size = new System.Drawing.Size(65, 20);
             this.button8.TabIndex = 34;
             this.button8.Tag = "2";
-            this.button8.Text = "选中此卡";
+            this.button8.Text = "点击选中";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
@@ -409,7 +409,7 @@
             this.button9.Size = new System.Drawing.Size(65, 20);
             this.button9.TabIndex = 35;
             this.button9.Tag = "3";
-            this.button9.Text = "选中此卡";
+            this.button9.Text = "点击选中";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
@@ -420,7 +420,7 @@
             this.button10.Size = new System.Drawing.Size(65, 20);
             this.button10.TabIndex = 36;
             this.button10.Tag = "4";
-            this.button10.Text = "选中此卡";
+            this.button10.Text = "点击选中";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.DuelButton1_Click);
             // 
@@ -431,7 +431,7 @@
             this.button11.Size = new System.Drawing.Size(65, 20);
             this.button11.TabIndex = 37;
             this.button11.Tag = "0";
-            this.button11.Text = "选中此卡";
+            this.button11.Text = "点击选中";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
@@ -442,7 +442,7 @@
             this.button12.Size = new System.Drawing.Size(65, 20);
             this.button12.TabIndex = 38;
             this.button12.Tag = "1";
-            this.button12.Text = "选中此卡";
+            this.button12.Text = "点击选中";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
@@ -453,7 +453,7 @@
             this.button13.Size = new System.Drawing.Size(65, 20);
             this.button13.TabIndex = 41;
             this.button13.Tag = "2";
-            this.button13.Text = "选中此卡";
+            this.button13.Text = "点击选中";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
@@ -464,7 +464,7 @@
             this.button14.Size = new System.Drawing.Size(65, 20);
             this.button14.TabIndex = 40;
             this.button14.Tag = "3";
-            this.button14.Text = "选中此卡";
+            this.button14.Text = "点击选中";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
@@ -475,7 +475,7 @@
             this.button15.Size = new System.Drawing.Size(65, 20);
             this.button15.TabIndex = 39;
             this.button15.Tag = "4";
-            this.button15.Text = "选中此卡";
+            this.button15.Text = "点击选中";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.DuelButton2_Click);
             // 
@@ -590,7 +590,7 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(697, 199);
+            this.button21.Location = new System.Drawing.Point(697, 237);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(74, 23);
             this.button21.TabIndex = 54;
@@ -601,7 +601,7 @@
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(697, 161);
+            this.button23.Location = new System.Drawing.Point(696, 199);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(96, 23);
             this.button23.TabIndex = 56;
@@ -611,7 +611,7 @@
             // 
             // toBeDenfend
             // 
-            this.toBeDenfend.Location = new System.Drawing.Point(39, 283);
+            this.toBeDenfend.Location = new System.Drawing.Point(34, 237);
             this.toBeDenfend.Name = "toBeDenfend";
             this.toBeDenfend.Size = new System.Drawing.Size(90, 33);
             this.toBeDenfend.TabIndex = 57;
@@ -621,7 +621,7 @@
             // 
             // duelButton
             // 
-            this.duelButton.Location = new System.Drawing.Point(41, 212);
+            this.duelButton.Location = new System.Drawing.Point(34, 199);
             this.duelButton.Name = "duelButton";
             this.duelButton.Size = new System.Drawing.Size(75, 23);
             this.duelButton.TabIndex = 58;

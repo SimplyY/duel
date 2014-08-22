@@ -159,13 +159,12 @@ namespace duel
         {
             if (speakPlayer == 1)
             {
-                int[] playersLife = new int[2];
                 if (recentDuelCardAttacked.status == "攻击表示")
                 {
                     int difference = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.attack);
                     if (difference > 0)
                     {
-                        playersLife[1] -= difference;
+                        player2Life -= difference;
                         cardDuel2.RemoveCard(recentDuelCardAttacked);
                     }
                     if (difference == 0)
@@ -175,7 +174,7 @@ namespace duel
                     }
                     if (difference < 0)
                     {
-                        playersLife[0] -= difference;
+                        player1Life -= difference;
                         cardDuel1.RemoveCard(recentDuelCardAttack);
                     }
                 }
@@ -199,13 +198,12 @@ namespace duel
             }
             else if (speakPlayer == 2)
             {
-                int[] playersLife = new int[2];
                 if (recentDuelCardAttacked.status == "攻击表示")
                 {
                     int difference = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.attack);
                     if (difference > 0)
                     {
-                        playersLife[0] -= difference;
+                        player1Life -= difference;
                         cardDuel1.RemoveCard(recentDuelCardAttacked);
                     }
                     if (difference == 0)
@@ -215,7 +213,7 @@ namespace duel
                     }
                     if (difference < 0)
                     {
-                        playersLife[1] -= difference;
+                        player2Life -= difference;
                         cardDuel2.RemoveCard(recentDuelCardAttack);
                     }
                 }

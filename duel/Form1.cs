@@ -179,16 +179,16 @@ namespace duel
                     if (cardIndex < duelGame.cardDuel1.cards.Count)
                     {
                         Card beforeChosenCard = Game.recentDuelCardAttack;
-                        if (beforeChosenCard != null &&beforeChosenCard.hasBeenChosen == true)
+                        if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
                             InitBeforeButton(beforeChosenButton1);
                         }
 
                         Game.recentDuelCardAttack = duelGame.cardDuel1.cards[cardIndex];
+                        Game.recentDuelCardAttack.hasBeenChosen = true;
+
                         button.Text = "已被选中";
                         beforeChosenButton1 = button;
-
-                        Game.recentDuelCardAttack.hasBeenChosen = true;
                     }
                 }
                 else if (duelGame.speakPlayer == 2 && Game.recentDuelCardAttack != null)
@@ -197,8 +197,15 @@ namespace duel
                     int cardIndex = Convert.ToInt32(button.Tag);
                     if (cardIndex < duelGame.cardDuel2.cards.Count)
                     {
+                        Card beforeChosenCard = Game.recentDuelCardAttacked;
+                        if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
+                        {
+                            InitBeforeButton(beforeChosenButton1);
+                        }
+
                         Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
+
                         button.Text = "已被选中";
                         beforeChosenButton2 = button;
                     }
@@ -224,9 +231,10 @@ namespace duel
                         }
 
                         Game.recentDuelCardAttack = duelGame.cardDuel2.cards[cardIndex];
+                        Game.recentDuelCardAttack.hasBeenChosen = true;
+
                         button.Text = "已被选中";
                         beforeChosenButton1 = button;
-                        Game.recentDuelCardAttack.hasBeenChosen = true;
                     }
                 }
                 else if (duelGame.speakPlayer == 1 && Game.recentDuelCardAttack != null)
@@ -235,8 +243,15 @@ namespace duel
                     int cardIndex = Convert.ToInt32(button.Tag);
                     if (cardIndex < duelGame.cardDuel2.cards.Count)
                     {
+                        Card beforeChosenCard = Game.recentDuelCardAttacked;
+                        if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
+                        {
+                            InitBeforeButton(beforeChosenButton1);
+                        }
+
                         Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
+
                         button.Text = "已被选中";
                         beforeChosenButton2 = button;
                     }
@@ -259,7 +274,7 @@ namespace duel
 
         private void ChangeState_Click(object sender, EventArgs e)
         {
-            if (gameHasStarted == true && Game.recentDuelCardAttack!= null)
+            if (gameHasStarted == true && Game.recentDuelCardAttack != null)
             {
                 if (Game.recentDuelCardAttack.status == "攻击表示")
                 {

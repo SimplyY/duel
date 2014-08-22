@@ -288,5 +288,14 @@ namespace duel
             }
         }
 
+        private void duelButton_Click(object sender, EventArgs e)
+        {
+            if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked != null)
+            {
+                duelGame.Duel();
+                ShowNewTable();
+            }
+        }
+
     }
 }

@@ -82,6 +82,7 @@
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.toBeDenfend = new System.Windows.Forms.Button();
+            this.duelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -622,7 +623,7 @@
             // 
             // toBeDenfend
             // 
-            this.toBeDenfend.Location = new System.Drawing.Point(41, 237);
+            this.toBeDenfend.Location = new System.Drawing.Point(39, 283);
             this.toBeDenfend.Name = "toBeDenfend";
             this.toBeDenfend.Size = new System.Drawing.Size(90, 33);
             this.toBeDenfend.TabIndex = 57;
@@ -630,12 +631,23 @@
             this.toBeDenfend.UseVisualStyleBackColor = true;
             this.toBeDenfend.Click += new System.EventHandler(this.ChangeState_Click);
             // 
+            // duelButton
+            // 
+            this.duelButton.Location = new System.Drawing.Point(41, 212);
+            this.duelButton.Name = "duelButton";
+            this.duelButton.Size = new System.Drawing.Size(75, 23);
+            this.duelButton.TabIndex = 58;
+            this.duelButton.Text = "点击攻击";
+            this.duelButton.UseVisualStyleBackColor = true;
+            this.duelButton.Click += new System.EventHandler(this.duelButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 441);
+            this.Controls.Add(this.duelButton);
             this.Controls.Add(this.toBeDenfend);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
@@ -751,6 +763,7 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button toBeDenfend;
+        private System.Windows.Forms.Button duelButton;
     }
 }
 

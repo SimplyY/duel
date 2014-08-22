@@ -155,37 +155,37 @@ namespace duel
             }
         }
 
-        public void Duel(Card attackCard, Card attackedCard)
+        public void Duel()
         {
             if (speakPlayer == 1)
             {
                 int[] playersLife = new int[2];
-                if (attackedCard.status == "攻击表示")
+                if (recentDuelCardAttacked.status == "攻击表示")
                 {
-                    int difference = Convert.ToInt32(attackCard.attack) - Convert.ToInt32(attackedCard.attack);
+                    int difference = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.attack);
                     if (difference > 0)
                     {
                         playersLife[1] -= difference;
-                        cardDuel2.RemoveCard(attackedCard);
+                        cardDuel2.RemoveCard(recentDuelCardAttacked);
                     }
                     if (difference == 0)
                     {
-                        cardDuel1.RemoveCard(attackCard);
-                        cardDuel2.RemoveCard(attackedCard);
+                        cardDuel1.RemoveCard(recentDuelCardAttack);
+                        cardDuel2.RemoveCard(recentDuelCardAttacked);
                     }
                     if (difference < 0)
                     {
                         playersLife[0] -= difference;
-                        cardDuel1.RemoveCard(attackCard);
+                        cardDuel1.RemoveCard(recentDuelCardAttack);
                     }
                 }
 
-                if (attackedCard.status == "防守表示")
+                if (recentDuelCardAttacked.status == "防守表示")
                 {
-                    int differnece = Convert.ToInt32(attackCard.attack) - Convert.ToInt32(attackedCard.defend);
+                    int differnece = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.defend);
                     if (differnece > 0)
                     {
-                        cardDuel2.RemoveCard(attackedCard);
+                        cardDuel2.RemoveCard(recentDuelCardAttacked);
                     }
                     if (differnece == 0)
                     {
@@ -193,39 +193,39 @@ namespace duel
                     }
                     if (differnece < 0)
                     {
-                        cardDuel1.RemoveCard(attackCard);
+                        cardDuel1.RemoveCard(recentDuelCardAttack);
                     }
                 }
             }
             else if (speakPlayer == 2)
             {
                 int[] playersLife = new int[2];
-                if (attackedCard.status == "攻击表示")
+                if (recentDuelCardAttacked.status == "攻击表示")
                 {
-                    int difference = Convert.ToInt32(attackCard.attack) - Convert.ToInt32(attackedCard.attack);
+                    int difference = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.attack);
                     if (difference > 0)
                     {
                         playersLife[0] -= difference;
-                        cardDuel1.RemoveCard(attackedCard);
+                        cardDuel1.RemoveCard(recentDuelCardAttacked);
                     }
                     if (difference == 0)
                     {
-                        cardDuel1.RemoveCard(attackCard);
-                        cardDuel2.RemoveCard(attackedCard);
+                        cardDuel1.RemoveCard(recentDuelCardAttacked);
+                        cardDuel2.RemoveCard(recentDuelCardAttack);
                     }
                     if (difference < 0)
                     {
                         playersLife[1] -= difference;
-                        cardDuel2.RemoveCard(attackCard);
+                        cardDuel2.RemoveCard(recentDuelCardAttack);
                     }
                 }
 
-                if (attackedCard.status == "防守表示")
+                if (recentDuelCardAttacked.status == "防守表示")
                 {
-                    int differnece = Convert.ToInt32(attackCard.attack) - Convert.ToInt32(attackedCard.defend);
+                    int differnece = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.defend);
                     if (differnece > 0)
                     {
-                        cardDuel1.RemoveCard(attackedCard);
+                        cardDuel1.RemoveCard(recentDuelCardAttacked);
                     }
                     if (differnece == 0)
                     {
@@ -233,7 +233,7 @@ namespace duel
                     }
                     if (differnece < 0)
                     {
-                        cardDuel2.RemoveCard(attackCard);
+                        cardDuel2.RemoveCard(recentDuelCardAttack);
                     }
                 }
             }

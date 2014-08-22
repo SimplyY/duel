@@ -79,7 +79,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.playerBotton1 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.toBeDenfend = new System.Windows.Forms.Button();
             this.duelButton = new System.Windows.Forms.Button();
@@ -307,7 +306,7 @@
             // 
             // PlayerBotton2
             // 
-            this.PlayerBotton2.Location = new System.Drawing.Point(39, 77);
+            this.PlayerBotton2.Location = new System.Drawing.Point(34, 60);
             this.PlayerBotton2.Name = "PlayerBotton2";
             this.PlayerBotton2.Size = new System.Drawing.Size(75, 22);
             this.PlayerBotton2.TabIndex = 26;
@@ -545,7 +544,7 @@
             // 
             // Favtory2CardsAmountTextBox
             // 
-            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(41, 135);
+            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(34, 97);
             this.Favtory2CardsAmountTextBox.Name = "Favtory2CardsAmountTextBox";
             this.Favtory2CardsAmountTextBox.ReadOnly = true;
             this.Favtory2CardsAmountTextBox.Size = new System.Drawing.Size(90, 21);
@@ -581,7 +580,7 @@
             // 
             // playerBotton1
             // 
-            this.playerBotton1.Location = new System.Drawing.Point(680, 294);
+            this.playerBotton1.Location = new System.Drawing.Point(696, 312);
             this.playerBotton1.Name = "playerBotton1";
             this.playerBotton1.Size = new System.Drawing.Size(75, 22);
             this.playerBotton1.TabIndex = 53;
@@ -591,7 +590,7 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(681, 322);
+            this.button21.Location = new System.Drawing.Point(697, 199);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(74, 23);
             this.button21.TabIndex = 54;
@@ -600,20 +599,9 @@
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.TansSpeakerPlayerButton_Click);
             // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(40, 105);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 55;
-            this.button22.Tag = "22";
-            this.button22.Text = "结束此回合";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.endSpeak_Click);
-            // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(675, 212);
+            this.button23.Location = new System.Drawing.Point(697, 161);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(96, 23);
             this.button23.TabIndex = 56;
@@ -650,7 +638,6 @@
             this.Controls.Add(this.duelButton);
             this.Controls.Add(this.toBeDenfend);
             this.Controls.Add(this.button23);
-            this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.playerBotton1);
             this.Controls.Add(this.showStatusBox);
@@ -760,7 +747,6 @@
         private System.Windows.Forms.TextBox playerLife1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button toBeDenfend;
         private System.Windows.Forms.Button duelButton;

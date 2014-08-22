@@ -200,6 +200,7 @@ namespace duel
                         Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
                         button.Text = "已被选中";
+                        beforeChosenButton2 = button;
                     }
                 }
             }
@@ -237,6 +238,7 @@ namespace duel
                         Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
                         button.Text = "已被选中";
+                        beforeChosenButton2 = button;
                     }
                 }
             }
@@ -244,20 +246,15 @@ namespace duel
 
         private void InitBeforeButton(Button beforeButton)
         {
-            beforeButton.Text = "点击选中";
+            if (beforeButton != null)
+            {
+                beforeButton.Text = "点击选中";
+            }
         }
 
         private void InitBeforeCard(ref Card beforeCard)
         {
             beforeCard = null;
-        }
-
-        private void endSpeak_Click(object sender, EventArgs e)
-        {
-            if (gameHasStarted == true)
-            {
-                duelGame.TransformSpeakerPlayer();
-            }
         }
 
         private void ChangeState_Click(object sender, EventArgs e)
@@ -285,6 +282,10 @@ namespace duel
             if (gameHasStarted == true)
             {
                 duelGame.TransformSpeakerPlayer();
+                InitBeforeCard(ref Game.recentDuelCardAttack);
+                InitBeforeCard(ref Game.recentDuelCardAttacked);
+                InitBeforeButton(beforeChosenButton1);
+                InitBeforeButton(beforeChosenButton2);
             }
         }
 

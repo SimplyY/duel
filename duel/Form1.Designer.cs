@@ -82,6 +82,7 @@
             this.button23 = new System.Windows.Forms.Button();
             this.toBeDenfend = new System.Windows.Forms.Button();
             this.duelButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -316,7 +317,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(171, 425);
+            this.button1.Location = new System.Drawing.Point(171, 421);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 20);
             this.button1.TabIndex = 1;
@@ -327,7 +328,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(275, 425);
+            this.button2.Location = new System.Drawing.Point(275, 421);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(52, 20);
             this.button2.TabIndex = 2;
@@ -338,7 +339,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(382, 425);
+            this.button3.Location = new System.Drawing.Point(382, 421);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(52, 20);
             this.button3.TabIndex = 3;
@@ -349,7 +350,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(489, 425);
+            this.button4.Location = new System.Drawing.Point(489, 421);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(52, 20);
             this.button4.TabIndex = 4;
@@ -360,7 +361,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(593, 425);
+            this.button5.Location = new System.Drawing.Point(593, 421);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(52, 20);
             this.button5.TabIndex = 5;
@@ -590,7 +591,7 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(696, 199);
+            this.button21.Location = new System.Drawing.Point(696, 209);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(74, 23);
             this.button21.TabIndex = 54;
@@ -601,7 +602,7 @@
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(681, 122);
+            this.button23.Location = new System.Drawing.Point(681, 118);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(90, 48);
             this.button23.TabIndex = 56;
@@ -621,7 +622,7 @@
             // 
             // duelButton
             // 
-            this.duelButton.Location = new System.Drawing.Point(34, 199);
+            this.duelButton.Location = new System.Drawing.Point(34, 209);
             this.duelButton.Name = "duelButton";
             this.duelButton.Size = new System.Drawing.Size(75, 23);
             this.duelButton.TabIndex = 58;
@@ -629,12 +630,23 @@
             this.duelButton.UseVisualStyleBackColor = true;
             this.duelButton.Click += new System.EventHandler(this.duelButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 194);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "选中两个怪兽后";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 441);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.duelButton);
             this.Controls.Add(this.toBeDenfend);
             this.Controls.Add(this.button23);
@@ -750,6 +762,7 @@
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button toBeDenfend;
         private System.Windows.Forms.Button duelButton;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -71,6 +71,21 @@ namespace duel
             DuelTextBoxs.ShowPlayersLife(player1Life, player2Life);
         }
 
+        public bool IsGameOver()
+        {
+            if (player1Life <= 0)
+            {
+                GameStatus.SetErrorInfo("玩家2取得胜利");
+                return true;
+            }
+            if (player2Life <= 0)
+            {
+                GameStatus.SetErrorInfo("玩家1取得胜利");
+                return true;
+            }
+            return false;
+        }
+
         private void InitializeGame()
         {
             GameStatus.SetStatusInfo("游戏已经开始");

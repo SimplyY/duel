@@ -43,12 +43,14 @@ namespace duel
 
         public void timer1_Tick(object sender, EventArgs e)
         {
-            if (!duelGame.hasError)
+            if (duelGame.IsGameOver() || duelGame.hasError)
+            {
+            }
+            else
             {
                 SetStatusBox();
+                GameStatus.ShowGameStatus(showStatusBox);
             }
-            GameStatus.ShowGameStatus(showStatusBox);
-
         }
 
         private void SetStatusBox()
@@ -325,6 +327,11 @@ namespace duel
                     ShowNewTable();
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

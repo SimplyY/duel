@@ -79,10 +79,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.playerBotton1 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.startGameButton = new System.Windows.Forms.Button();
             this.toBeDenfend = new System.Windows.Forms.Button();
             this.duelButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.attackPlayer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -602,17 +603,17 @@
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(681, 118);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(90, 48);
-            this.button23.TabIndex = 56;
-            this.button23.Text = "开始游戏";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.StartGame);
+            this.startGameButton.Location = new System.Drawing.Point(681, 118);
+            this.startGameButton.Name = "button23";
+            this.startGameButton.Size = new System.Drawing.Size(90, 48);
+            this.startGameButton.TabIndex = 56;
+            this.startGameButton.Text = "开始游戏";
+            this.startGameButton.UseVisualStyleBackColor = true;
+            this.startGameButton.Click += new System.EventHandler(this.StartGame);
             // 
             // toBeDenfend
             // 
-            this.toBeDenfend.Location = new System.Drawing.Point(34, 250);
+            this.toBeDenfend.Location = new System.Drawing.Point(34, 288);
             this.toBeDenfend.Name = "toBeDenfend";
             this.toBeDenfend.Size = new System.Drawing.Size(90, 46);
             this.toBeDenfend.TabIndex = 57;
@@ -622,7 +623,7 @@
             // 
             // duelButton
             // 
-            this.duelButton.Location = new System.Drawing.Point(34, 209);
+            this.duelButton.Location = new System.Drawing.Point(31, 201);
             this.duelButton.Name = "duelButton";
             this.duelButton.Size = new System.Drawing.Size(75, 23);
             this.duelButton.TabIndex = 58;
@@ -633,12 +634,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 194);
+            this.label1.Location = new System.Drawing.Point(32, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 59;
             this.label1.Text = "选中两个怪兽后";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // attackPlayer
+            // 
+            this.attackPlayer.Location = new System.Drawing.Point(31, 247);
+            this.attackPlayer.Name = "attackPlayer";
+            this.attackPlayer.Size = new System.Drawing.Size(90, 23);
+            this.attackPlayer.TabIndex = 60;
+            this.attackPlayer.Text = "直接攻击玩家";
+            this.attackPlayer.UseVisualStyleBackColor = true;
+            this.attackPlayer.Click += new System.EventHandler(this.AttackPlayer_Click);
             // 
             // Form1
             // 
@@ -646,10 +657,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 441);
+            this.Controls.Add(this.attackPlayer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.duelButton);
             this.Controls.Add(this.toBeDenfend);
-            this.Controls.Add(this.button23);
+            this.Controls.Add(this.startGameButton);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.playerBotton1);
             this.Controls.Add(this.showStatusBox);
@@ -759,10 +771,11 @@
         private System.Windows.Forms.TextBox playerLife1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button startGameButton;
         private System.Windows.Forms.Button toBeDenfend;
         private System.Windows.Forms.Button duelButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button attackPlayer;
     }
 }
 

@@ -32,7 +32,7 @@ namespace duel
 
         public void ShowNewTable()
         {
-            duelGame.Show();
+            duelGame.ShowPlayersLife();
             duelGame.cardFactory1.ShowCardsAmount();
             duelGame.cardFactory2.ShowCardsAmount();
             duelGame.cardManager1.Show();
@@ -45,6 +45,10 @@ namespace duel
         {
             if (duelGame.IsGameOver() || duelGame.hasError)
             {
+                GameStatus.ShowGameStatus(showStatusBox);
+                gameHasStarted = false;
+
+                startGameButton.Text("点击重新开始");
             }
             else
             {
@@ -232,7 +236,7 @@ namespace duel
                         Card beforeChosenCard = Game.recentDuelCardAttack;
                         if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton2);
+                            InitBeforeButton(beforeChosenButton1);
                         }
 
                         Game.recentDuelCardAttack = duelGame.cardDuel2.cards[cardIndex];
@@ -251,7 +255,7 @@ namespace duel
                         Card beforeChosenCard = Game.recentDuelCardAttacked;
                         if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton1);
+                            InitBeforeButton(beforeChosenButton2);
                         }
 
                         Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
@@ -298,6 +302,7 @@ namespace duel
                 InitBeforeButton(beforeChosenButton1);
                 InitBeforeCard(ref Game.recentDuelCardAttack);
 
+                ++duelGame.timesAmount;
                 ShowNewTable();
             }
         }
@@ -329,10 +334,32 @@ namespace duel
             }
         }
 
+        private void AttackPlayer_Click(object sender, EventArgs e)
+        {
+            if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked == null && duelGame.timesAmount != 1)
+            {
+                if (duelGame.cardDuel1.cards.Count == 0)
+                {
+                    duelGame.player1Life -= Convert.ToInt32(Game.recentDuelCardAttack.attack);
+                }
+                if (duelGame.cardDuel2.cards.Count == 0)
+                {
+                    duelGame.player2Life -= Convert.ToInt32(Game.recentDuelCardAttack.attack);
+                }
+                InitBeforeCard(ref Game.recentDuelCardAttack);
+                InitBeforeButton(beforeChosenButton1);
+
+                ShowNewTable();
+            }
+        }
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+
 
     }
 }

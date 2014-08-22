@@ -10,9 +10,10 @@ namespace duel
     {
         public CardsDuel(int number, int theBeginIndexOfBoxes) :base(number ,theBeginIndexOfBoxes){}
 
-        public void RemoveCard(Card removedCard)
+        public void RemoveCard(ref Card removedCard)
         {
             cards.Remove(removedCard);
+            removedCard = null;
         }
     }
 }

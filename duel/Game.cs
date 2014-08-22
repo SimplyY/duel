@@ -10,6 +10,7 @@ namespace duel
     public class Game
     {
         public bool hasError;
+        public int timesAmount;
 
         public int speakPlayer { get; set; }
 
@@ -66,7 +67,7 @@ namespace duel
             InitializeGame();
         }
 
-        public void Show()
+        public void ShowPlayersLife()
         {
             DuelTextBoxs.ShowPlayersLife(player1Life, player2Life);
         }
@@ -107,6 +108,7 @@ namespace duel
 
             InitStart();
             speakPlayer = 1;
+            timesAmount = 1;
         }
 
         private void InitStart()
@@ -180,27 +182,27 @@ namespace duel
                     if (difference > 0)
                     {
                         player2Life -= difference;
-                        cardDuel2.RemoveCard(recentDuelCardAttacked);
+                        cardDuel2.RemoveCard(ref recentDuelCardAttacked);
                         recentDuelCardAttack.hasAttacked = true;
                     }
                     if (difference == 0)
                     {
-                        cardDuel1.RemoveCard(recentDuelCardAttack);
-                        cardDuel2.RemoveCard(recentDuelCardAttacked);
+                        cardDuel1.RemoveCard(ref recentDuelCardAttack);
+                        cardDuel2.RemoveCard(ref recentDuelCardAttacked);
                     }
                     if (difference < 0)
                     {
                         player1Life += difference;
-                        cardDuel1.RemoveCard(recentDuelCardAttack);
+                        cardDuel1.RemoveCard(ref recentDuelCardAttack);
                     }
                 }
 
-                if (recentDuelCardAttacked.status == "防守表示")
+                else if (recentDuelCardAttacked.status == "防守表示")
                 {
                     int differnece = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.defend);
                     if (differnece > 0)
                     {
-                        cardDuel2.RemoveCard(recentDuelCardAttacked);
+                        cardDuel2.RemoveCard(ref recentDuelCardAttacked);
                         recentDuelCardAttack.hasAttacked = true;
                     }
                     if (differnece == 0)
@@ -209,7 +211,7 @@ namespace duel
                     }
                     if (differnece < 0)
                     {
-                        cardDuel1.RemoveCard(recentDuelCardAttack);
+                        cardDuel1.RemoveCard(ref recentDuelCardAttack);
                     }
                 }
             }
@@ -221,18 +223,18 @@ namespace duel
                     if (difference > 0)
                     {
                         player1Life -= difference;
-                        cardDuel1.RemoveCard(recentDuelCardAttacked);
+                        cardDuel1.RemoveCard(ref recentDuelCardAttacked);
                         recentDuelCardAttack.hasAttacked = true;
                     }
                     if (difference == 0)
                     {
-                        cardDuel1.RemoveCard(recentDuelCardAttacked);
-                        cardDuel2.RemoveCard(recentDuelCardAttack);
+                        cardDuel1.RemoveCard(ref recentDuelCardAttacked);
+                        cardDuel2.RemoveCard(ref recentDuelCardAttack);
                     }
                     if (difference < 0)
                     {
                         player2Life += difference;
-                        cardDuel2.RemoveCard(recentDuelCardAttack);
+                        cardDuel2.RemoveCard(ref recentDuelCardAttack);
                     }
                 }
 
@@ -241,7 +243,7 @@ namespace duel
                     int differnece = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.defend);
                     if (differnece > 0)
                     {
-                        cardDuel1.RemoveCard(recentDuelCardAttacked);
+                        cardDuel1.RemoveCard(ref recentDuelCardAttacked);
                         recentDuelCardAttack.hasAttacked = true;
                     }
                     if (differnece == 0)
@@ -250,7 +252,7 @@ namespace duel
                     }
                     if (differnece < 0)
                     {
-                        cardDuel2.RemoveCard(recentDuelCardAttack);
+                        cardDuel2.RemoveCard(ref recentDuelCardAttack);
                     }
                 }
             }

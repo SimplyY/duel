@@ -26,6 +26,7 @@ namespace duel
 
         public string status { get; set; }
         public bool hasBeenChosen;
+        public bool hasAttacked;
 
         public string cardPackage { get; set; }
         public string japanName { get; set; }
@@ -38,6 +39,11 @@ namespace duel
         public string attack { get; set; }
         public string defend { get; set; }
 
+        public Card()
+        {
+            hasAttacked = false;
+            hasBeenChosen = false;
+        }
 
         public string makeShowInfo()
         {

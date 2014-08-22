@@ -68,7 +68,7 @@ namespace duel
 
         public void Show()
         {
-            DuelTextBoxs.ShowPlayersLife(player2Life, player2Life);
+            DuelTextBoxs.ShowPlayersLife(player1Life, player2Life);
         }
 
         private void InitializeGame()
@@ -166,6 +166,7 @@ namespace duel
                     {
                         player2Life -= difference;
                         cardDuel2.RemoveCard(recentDuelCardAttacked);
+                        recentDuelCardAttack.hasAttacked = true;
                     }
                     if (difference == 0)
                     {
@@ -174,7 +175,7 @@ namespace duel
                     }
                     if (difference < 0)
                     {
-                        player1Life -= difference;
+                        player1Life += difference;
                         cardDuel1.RemoveCard(recentDuelCardAttack);
                     }
                 }
@@ -185,10 +186,11 @@ namespace duel
                     if (differnece > 0)
                     {
                         cardDuel2.RemoveCard(recentDuelCardAttacked);
+                        recentDuelCardAttack.hasAttacked = true;
                     }
                     if (differnece == 0)
                     {
-
+                        recentDuelCardAttack.hasAttacked = true;
                     }
                     if (differnece < 0)
                     {
@@ -205,6 +207,7 @@ namespace duel
                     {
                         player1Life -= difference;
                         cardDuel1.RemoveCard(recentDuelCardAttacked);
+                        recentDuelCardAttack.hasAttacked = true;
                     }
                     if (difference == 0)
                     {
@@ -213,7 +216,7 @@ namespace duel
                     }
                     if (difference < 0)
                     {
-                        player2Life -= difference;
+                        player2Life += difference;
                         cardDuel2.RemoveCard(recentDuelCardAttack);
                     }
                 }
@@ -224,10 +227,11 @@ namespace duel
                     if (differnece > 0)
                     {
                         cardDuel1.RemoveCard(recentDuelCardAttacked);
+                        recentDuelCardAttack.hasAttacked = true;
                     }
                     if (differnece == 0)
                     {
-
+                        recentDuelCardAttack.hasAttacked = true;
                     }
                     if (differnece < 0)
                     {

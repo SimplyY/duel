@@ -272,6 +272,11 @@ namespace duel
 
         private void InitBeforeCard(ref Card beforeCard)
         {
+            if (beforeCard != null)
+            {
+                beforeCard.hasAttacked = false;
+                beforeCard.hasBeenChosen = false;
+            }
             beforeCard = null;
         }
 
@@ -311,7 +316,7 @@ namespace duel
         {
             if (gameHasStarted == true)
             {
-                if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked != null && Game.recentDuelCardAttack.status == "攻击表示")
+                if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked != null && Game.recentDuelCardAttack.status == "攻击表示" && Game.recentDuelCardAttack.hasAttacked == false)
                 {
                     duelGame.Duel();
 

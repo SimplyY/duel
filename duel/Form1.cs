@@ -198,15 +198,15 @@ namespace duel
                 {
                     Button button = (Button)sender;
                     int cardIndex = Convert.ToInt32(button.Tag);
-                    if (cardIndex < duelGame.cardDuel2.cards.Count)
+                    if (cardIndex < duelGame.cardDuel1.cards.Count)
                     {
                         Card beforeChosenCard = Game.recentDuelCardAttacked;
                         if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton1);
+                            InitBeforeButton(beforeChosenButton2);
                         }
 
-                        Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
+                        Game.recentDuelCardAttacked = duelGame.cardDuel1.cards[cardIndex];
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
 
                         button.Text = "已被选中";
@@ -230,7 +230,7 @@ namespace duel
                         Card beforeChosenCard = Game.recentDuelCardAttack;
                         if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton1);
+                            InitBeforeButton(beforeChosenButton2);
                         }
 
                         Game.recentDuelCardAttack = duelGame.cardDuel2.cards[cardIndex];
@@ -311,9 +311,12 @@ namespace duel
         {
             if (gameHasStarted == true)
             {
-                if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked != null && Game.recentDuelCardAttack.status == "攻击状态")
+                if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked != null && Game.recentDuelCardAttack.status == "攻击表示")
                 {
                     duelGame.Duel();
+
+                    InitBeforeButton(beforeChosenButton1);
+                    InitBeforeButton(beforeChosenButton2);
                     ShowNewTable();
                 }
             }

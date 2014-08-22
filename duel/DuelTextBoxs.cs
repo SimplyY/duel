@@ -15,7 +15,7 @@ namespace duel
             for (int i = 0; i < cards.Count; i++)
             {
                 DuelTextBoxs.Boxes[i + boxesBeginIndex].Text = cards[i].makeShowInfo();
-                DuelTextBoxs.Boxes[i + boxesBeginIndex].Height = 60;
+                DuelTextBoxs.Boxes[i + boxesBeginIndex].Height = 65;
             }
             for (int i = cards.Count; i < 5; i++)
             {

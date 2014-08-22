@@ -15,14 +15,14 @@ namespace duel
         public Game duelGame { get; set; }
         private bool gameHasStarted;
 
-        private Button beforeChosenButton;
+        private Button beforeChosenButton1;
+        private Button beforeChosenButton2;
 
         public Form1()
         {
             gameHasStarted = false;
             InitializeComponent();
             InitDuelTextBox();
-            Game.InitRecentCard();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -179,19 +179,19 @@ namespace duel
                     if (cardIndex < duelGame.cardDuel1.cards.Count)
                     {
                         Card beforeChosenCard = Game.recentDuelCardAttack;
-                        if (beforeChosenCard.hasBeenChosen == true)
+                        if (beforeChosenCard != null &&beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton);
+                            InitBeforeButton(beforeChosenButton1);
                         }
 
                         Game.recentDuelCardAttack = duelGame.cardDuel1.cards[cardIndex];
                         button.Text = "已被选中";
-                        beforeChosenButton = button;
+                        beforeChosenButton1 = button;
 
                         Game.recentDuelCardAttack.hasBeenChosen = true;
                     }
                 }
-                else if (duelGame.speakPlayer == 2 && Game.recentDuelCardAttack.hasBeenChosen == true)
+                else if (duelGame.speakPlayer == 2 && Game.recentDuelCardAttack != null)
                 {
                     Button button = (Button)sender;
                     int cardIndex = Convert.ToInt32(button.Tag);
@@ -201,7 +201,6 @@ namespace duel
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
                         button.Text = "已被选中";
                     }
-                    
                 }
             }
         }
@@ -216,12 +215,20 @@ namespace duel
                     int cardIndex = Convert.ToInt32(button.Tag);
                     if (cardIndex < duelGame.cardDuel2.cards.Count)
                     {
+
+                        Card beforeChosenCard = Game.recentDuelCardAttack;
+                        if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
+                        {
+                            InitBeforeButton(beforeChosenButton1);
+                        }
+
                         Game.recentDuelCardAttack = duelGame.cardDuel2.cards[cardIndex];
                         button.Text = "已被选中";
+                        beforeChosenButton1 = button;
                         Game.recentDuelCardAttack.hasBeenChosen = true;
                     }
                 }
-                else if (duelGame.speakPlayer == 1 && Game.recentDuelCardAttack.hasBeenChosen == true)
+                else if (duelGame.speakPlayer == 1 && Game.recentDuelCardAttack != null)
                 {
                     Button button = (Button)sender;
                     int cardIndex = Convert.ToInt32(button.Tag);
@@ -231,17 +238,18 @@ namespace duel
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
                         button.Text = "已被选中";
                     }
-
                 }
-                
             }
-
         }
 
         private void InitBeforeButton(Button beforeButton)
         {
             beforeButton.Text = "点击选中";
+        }
 
+        private void InitBeforeCard(ref Card beforeCard)
+        {
+            beforeCard = null;
         }
 
         private void endSpeak_Click(object sender, EventArgs e)
@@ -252,9 +260,9 @@ namespace duel
             }
         }
 
-        private void ChangeStateToDefend_Click(object sender, EventArgs e)
+        private void ChangeState_Click(object sender, EventArgs e)
         {
-            if (gameHasStarted == true && Game.recentDuelCardAttack.status != "空")
+            if (gameHasStarted == true && Game.recentDuelCardAttack!= null)
             {
                 if (Game.recentDuelCardAttack.status == "攻击表示")
                 {
@@ -264,6 +272,9 @@ namespace duel
                 {
                     Game.recentDuelCardAttack.status = "攻击表示";
                 }
+
+                InitBeforeButton(beforeChosenButton1);
+                InitBeforeCard(ref Game.recentDuelCardAttack);
 
                 ShowNewTable();
             }

@@ -71,12 +71,6 @@ namespace duel
             DuelTextBoxs.ShowPlayersLife(player2Life, player2Life);
         }
 
-        public static void InitRecentCard()
-        {
-            recentDuelCardAttack = new Card();
-            recentDuelCardAttack.status = "空";
-        }
-
         private void InitializeGame()
         {
             GameStatus.SetStatusInfo("游戏已经开始");

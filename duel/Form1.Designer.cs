@@ -628,7 +628,7 @@
             this.toBeDenfend.TabIndex = 57;
             this.toBeDenfend.Text = "点击更改选中的怪兽卡状态";
             this.toBeDenfend.UseVisualStyleBackColor = true;
-            this.toBeDenfend.Click += new System.EventHandler(this.ChangeStateToDefend_Click);
+            this.toBeDenfend.Click += new System.EventHandler(this.ChangeState_Click);
             // 
             // Form1
             // 
@@ -689,7 +689,7 @@
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("宋体", 9F);
             this.Name = "Form1";
-            this.Text = "选中此卡";
+            this.Text = "Duel";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -314,9 +314,29 @@ namespace duel
                 duelGame.TransformSpeakerPlayer();
                 InitBeforeCard(ref Game.recentDuelCardAttack);
                 InitBeforeCard(ref Game.recentDuelCardAttacked);
+                InitDuelCard(duelGame);
                 InitBeforeButton(beforeChosenButton1);
                 InitBeforeButton(beforeChosenButton2);
             }
+        }
+
+        private void InitDuelCard(Game duelGame)
+        {
+            CardsDuel cardDuel1 = duelGame.cardDuel1;
+            CardsDuel cardDuel2 = duelGame.cardDuel2;
+
+            InitCard(cardDuel1);
+            InitCard(cardDuel2);
+        }
+
+        private void InitCard(CardsDuel cardDuel)
+        {
+            for (int i = 0; i < cardDuel.cards.Count; i++)
+            {
+                cardDuel.cards[i].hasAttacked = false;
+                cardDuel.cards[i].hasBeenChosen = false;
+            }
+
         }
 
         private void duelButton_Click(object sender, EventArgs e)
@@ -336,7 +356,7 @@ namespace duel
 
         private void AttackPlayer_Click(object sender, EventArgs e)
         {
-            if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttacked == null && duelGame.timesAmount != 1)
+            if (Game.recentDuelCardAttack != null && Game.recentDuelCardAttack.hasAttacked == false &&Game.recentDuelCardAttacked == null && duelGame.timesAmount != 1)
             {
                 if (duelGame.cardDuel1.cards.Count == 0)
                 {
@@ -348,6 +368,7 @@ namespace duel
                 }
                 InitBeforeCard(ref Game.recentDuelCardAttack);
                 InitBeforeButton(beforeChosenButton1);
+                Game.recentDuelCardAttack.hasAttacked = true;
 
                 ShowNewTable();
             }

@@ -238,7 +238,7 @@ namespace duel
                     }
                 }
 
-                if (recentDuelCardAttacked.status == "防守表示")
+                else if (recentDuelCardAttacked.status == "防守表示")
                 {
                     int differnece = Convert.ToInt32(recentDuelCardAttack.attack) - Convert.ToInt32(recentDuelCardAttacked.defend);
                     if (differnece > 0)

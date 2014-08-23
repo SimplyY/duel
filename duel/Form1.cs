@@ -48,7 +48,7 @@ namespace duel
                 GameStatus.ShowGameStatus(showStatusBox);
                 gameHasStarted = false;
 
-                startGameButton.Text("点击重新开始");
+                startGameButton.Text = "点击重新开始";
             }
             else
             {

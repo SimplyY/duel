@@ -12,7 +12,16 @@ Duel
 
 Working stage
 ---
-fixed bugs
+1. Fixed bugs
+2. Resharp.
+
+
+
+TODO
+----
+
+Write a summary about creating these code for "duel manster".
+
 
 
 

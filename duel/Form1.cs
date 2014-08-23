@@ -15,8 +15,8 @@ namespace duel
         public Game duelGame { get; set; }
         private bool gameHasStarted;
 
-        private Button beforeChosenButton1;
-        private Button beforeChosenButton2;
+        private Button beforeChosenToAttackButton;
+        private Button beforeChosenToAttackedButton;
 
         public Form1()
         {
@@ -190,14 +190,14 @@ namespace duel
                         Card beforeChosenCard = Game.recentDuelCardAttack;
                         if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton1);
+                            InitBeforeButton(beforeChosenToAttackButton);
                         }
 
                         Game.recentDuelCardAttack = duelGame.cardDuel1.cards[cardIndex];
                         Game.recentDuelCardAttack.hasBeenChosen = true;
 
                         button.Text = "已被选中";
-                        beforeChosenButton1 = button;
+                        beforeChosenToAttackButton = button;
                     }
                 }
                 else if (duelGame.speakPlayer == 2 && Game.recentDuelCardAttack != null)
@@ -209,14 +209,14 @@ namespace duel
                         Card beforeChosenCard = Game.recentDuelCardAttacked;
                         if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton2);
+                            InitBeforeButton(beforeChosenToAttackedButton);
                         }
 
                         Game.recentDuelCardAttacked = duelGame.cardDuel1.cards[cardIndex];
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
 
                         button.Text = "已被选中";
-                        beforeChosenButton2 = button;
+                        beforeChosenToAttackedButton = button;
                     }
                 }
             }
@@ -236,14 +236,14 @@ namespace duel
                         Card beforeChosenCard = Game.recentDuelCardAttack;
                         if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton1);
+                            InitBeforeButton(beforeChosenToAttackButton);
                         }
 
                         Game.recentDuelCardAttack = duelGame.cardDuel2.cards[cardIndex];
                         Game.recentDuelCardAttack.hasBeenChosen = true;
 
                         button.Text = "已被选中";
-                        beforeChosenButton1 = button;
+                        beforeChosenToAttackButton = button;
                     }
                 }
                 else if (duelGame.speakPlayer == 1 && Game.recentDuelCardAttack != null)
@@ -255,14 +255,14 @@ namespace duel
                         Card beforeChosenCard = Game.recentDuelCardAttacked;
                         if (beforeChosenCard != null && beforeChosenCard.hasBeenChosen == true)
                         {
-                            InitBeforeButton(beforeChosenButton2);
+                            InitBeforeButton(beforeChosenToAttackedButton);
                         }
 
                         Game.recentDuelCardAttacked = duelGame.cardDuel2.cards[cardIndex];
                         Game.recentDuelCardAttacked.hasBeenChosen = true;
 
                         button.Text = "已被选中";
-                        beforeChosenButton2 = button;
+                        beforeChosenToAttackedButton = button;
                     }
                 }
             }
@@ -299,7 +299,7 @@ namespace duel
                     Game.recentDuelCardAttack.status = "攻击表示";
                 }
 
-                InitBeforeButton(beforeChosenButton1);
+                InitBeforeButton(beforeChosenToAttackButton);
                 InitBeforeCard(ref Game.recentDuelCardAttack);
 
                 ++duelGame.timesAmount;
@@ -315,8 +315,8 @@ namespace duel
                 InitBeforeCard(ref Game.recentDuelCardAttack);
                 InitBeforeCard(ref Game.recentDuelCardAttacked);
                 InitDuelCard(duelGame);
-                InitBeforeButton(beforeChosenButton1);
-                InitBeforeButton(beforeChosenButton2);
+                InitBeforeButton(beforeChosenToAttackButton);
+                InitBeforeButton(beforeChosenToAttackedButton);
             }
         }
 
@@ -347,8 +347,8 @@ namespace duel
                 {
                     duelGame.Duel();
 
-                    InitBeforeButton(beforeChosenButton1);
-                    InitBeforeButton(beforeChosenButton2);
+                    InitBeforeButton(beforeChosenToAttackButton);
+                    InitBeforeButton(beforeChosenToAttackedButton);
                     ShowNewTable();
                 }
             }
@@ -367,7 +367,7 @@ namespace duel
                     duelGame.player2Life -= Convert.ToInt32(Game.recentDuelCardAttack.attack);
                 }
                 InitBeforeCard(ref Game.recentDuelCardAttack);
-                InitBeforeButton(beforeChosenButton1);
+                InitBeforeButton(beforeChosenToAttackButton);
                 Game.recentDuelCardAttack.hasAttacked = true;
 
                 ShowNewTable();

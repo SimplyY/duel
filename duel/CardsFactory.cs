@@ -9,8 +9,8 @@ namespace duel
 {
     public class CardsFactory
     {
-        public int FactoryNumber;
-        public int pickCardsAmount;
+        public int id;
+        public int enableToPickCardsAmount;
 
         public List<Card> cards;
 
@@ -18,7 +18,7 @@ namespace duel
 
         public CardsFactory(string cardsInfoFileLocation, int number)
         {
-            FactoryNumber = number;
+            id = number;
             cards = new List<Card>();
 
             SetCardsInfoFileLocation(cardsInfoFileLocation);
@@ -28,11 +28,11 @@ namespace duel
         public void ShowCardsAmount()
         {
             const string info = "剩余卡牌数：";
-            if (FactoryNumber == 1)
+            if (id == 1)
             {
                 DuelTextBoxs.Boxes[20].Text = info + Convert.ToString(cards.Count);
             }
-            else if (FactoryNumber == 2)
+            else if (id == 2)
             {
                 DuelTextBoxs.Boxes[21].Text = info + Convert.ToString(cards.Count);
             }
@@ -52,7 +52,7 @@ namespace duel
             {
                 PopedCard = cards[0];
                 cards.RemoveAt(0);
-                --pickCardsAmount;
+                --enableToPickCardsAmount;
                 return PopedCard;
             }
             else

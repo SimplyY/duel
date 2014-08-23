@@ -52,12 +52,12 @@ namespace duel
 
             if (speakPlayer == 1)
             {
-                cardFactory2.pickCardsAmount = 1;
+                cardFactory2.enableToPickCardsAmount = 1;
                 speakPlayer = 2;
             }
             else if (speakPlayer == 2)
             {
-                cardFactory1.pickCardsAmount = 1;
+                cardFactory1.enableToPickCardsAmount = 1;
                 speakPlayer = 1;
             }
         }
@@ -122,19 +122,19 @@ namespace duel
                 sendedCard = cardFactory2.PopACard();
                 cardManager2.PushACard(sendedCard);
             }
-            cardFactory1.pickCardsAmount = 0;
-            cardFactory2.pickCardsAmount = 0;
+            cardFactory1.enableToPickCardsAmount = 0;
+            cardFactory2.enableToPickCardsAmount = 0;
         }
 
         private void SendACardToManager()
         {
             Card sendedCard;
-            if (speakPlayer == 1 && cardFactory1.pickCardsAmount >= 1)
+            if (speakPlayer == 1 && cardFactory1.enableToPickCardsAmount >= 1)
             {
                 sendedCard = cardFactory1.PopACard();
                 cardManager1.PushACard(sendedCard);
             }
-            else if (speakPlayer == 2 && cardFactory2.pickCardsAmount >= 1)
+            else if (speakPlayer == 2 && cardFactory2.enableToPickCardsAmount >= 1)
             {
                 sendedCard = cardFactory2.PopACard();
                 cardManager2.PushACard(sendedCard);

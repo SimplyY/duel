@@ -50,7 +50,14 @@ namespace duel
             showInfo = "";
             if (status != null)
             {
-                showInfo = "状态：" + status + "\r\n";
+                if (hasAttacked == false)
+                {
+                    showInfo = "状态：" + status + "\r\n";
+                }
+                else
+                {
+                    showInfo = "状态：" + "已发动攻击" + "\r\n";
+                }
             }
 
             showInfo += "怪兽名：" + ChineseName + "\r\n";

@@ -538,7 +538,7 @@
             // 
             // Favtory1CardsAmountTextBox
             // 
-            this.Favtory1CardsAmountTextBox.Location = new System.Drawing.Point(680, 376);
+            this.Favtory1CardsAmountTextBox.Location = new System.Drawing.Point(695, 376);
             this.Favtory1CardsAmountTextBox.Name = "Favtory1CardsAmountTextBox";
             this.Favtory1CardsAmountTextBox.ReadOnly = true;
             this.Favtory1CardsAmountTextBox.Size = new System.Drawing.Size(90, 21);
@@ -546,7 +546,7 @@
             // 
             // Favtory2CardsAmountTextBox
             // 
-            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(33, 122);
+            this.Favtory2CardsAmountTextBox.Location = new System.Drawing.Point(33, 123);
             this.Favtory2CardsAmountTextBox.Name = "Favtory2CardsAmountTextBox";
             this.Favtory2CardsAmountTextBox.ReadOnly = true;
             this.Favtory2CardsAmountTextBox.Size = new System.Drawing.Size(90, 21);
@@ -562,7 +562,7 @@
             // 
             // playerLife1
             // 
-            this.playerLife1.Location = new System.Drawing.Point(676, 16);
+            this.playerLife1.Location = new System.Drawing.Point(695, 18);
             this.playerLife1.Name = "playerLife1";
             this.playerLife1.ReadOnly = true;
             this.playerLife1.Size = new System.Drawing.Size(96, 21);
@@ -574,7 +574,7 @@
             // 
             // playerBotton1
             // 
-            this.playerBotton1.Location = new System.Drawing.Point(695, 337);
+            this.playerBotton1.Location = new System.Drawing.Point(694, 337);
             this.playerBotton1.Name = "playerBotton1";
             this.playerBotton1.Size = new System.Drawing.Size(75, 22);
             this.playerBotton1.TabIndex = 53;
@@ -595,7 +595,7 @@
             // 
             // startGameButton
             // 
-            this.startGameButton.Location = new System.Drawing.Point(680, 143);
+            this.startGameButton.Location = new System.Drawing.Point(694, 145);
             this.startGameButton.Name = "startGameButton";
             this.startGameButton.Size = new System.Drawing.Size(90, 48);
             this.startGameButton.TabIndex = 56;
@@ -615,9 +615,9 @@
             // 
             // duelButton
             // 
-            this.duelButton.Location = new System.Drawing.Point(30, 226);
+            this.duelButton.Location = new System.Drawing.Point(30, 207);
             this.duelButton.Name = "duelButton";
-            this.duelButton.Size = new System.Drawing.Size(75, 23);
+            this.duelButton.Size = new System.Drawing.Size(87, 23);
             this.duelButton.TabIndex = 58;
             this.duelButton.Text = "点击攻击";
             this.duelButton.UseVisualStyleBackColor = true;
@@ -626,11 +626,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 211);
+            this.label1.Font = new System.Drawing.Font("宋体", 10F);
+            this.label1.Location = new System.Drawing.Point(32, 193);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.Size = new System.Drawing.Size(91, 14);
             this.label1.TabIndex = 59;
-            this.label1.Text = "选中两个怪兽后";
+            this.label1.Text = "选中两个怪兽";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // attackPlayer
@@ -646,7 +647,7 @@
             // showStatusBox
             // 
             this.showStatusBox.Font = new System.Drawing.Font("宋体", 12F);
-            this.showStatusBox.ForeColor = System.Drawing.Color.Blue;
+            this.showStatusBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.showStatusBox.Location = new System.Drawing.Point(342, 14);
             this.showStatusBox.Multiline = true;
             this.showStatusBox.Name = "showStatusBox";

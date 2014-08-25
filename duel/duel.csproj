@@ -48,7 +48,7 @@
     <Compile Include="CardsDuel.cs" />
     <Compile Include="CardsFactory.cs" />
     <Compile Include="CardsManager.cs" />
-    <Compile Include="DuelTextBoxs.cs" />
+    <Compile Include="DuelTextBoxes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

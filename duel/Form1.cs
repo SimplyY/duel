@@ -408,6 +408,11 @@ namespace duel
 
         }
 
+        private void showStatusBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }

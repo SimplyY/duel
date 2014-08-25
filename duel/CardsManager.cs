@@ -13,16 +13,15 @@ namespace duel
         public List<Card> cards { get; private set; }
 
         public CardsManager(){}
-        public CardsManager(int number, int theBeginIndexOfBoxes)
+        public CardsManager(int number)
         {
             this.id = number;
-            this.theBeginIndexOfBoxes = theBeginIndexOfBoxes;
             cards = new List<Card>();
         }
 
         virtual public void Show()
         {
-            DuelTextBoxs.ShowManagerBox(cards, theBeginIndexOfBoxes);
+            DuelTextBoxs.ShowManager(cards, id);
         }
 
         public void PushACard(Card pushedCard)

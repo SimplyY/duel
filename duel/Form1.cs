@@ -22,7 +22,7 @@ namespace duel
         {
             gameHasStarted = false;
             InitializeComponent();
-            InitDuelTextBox();
+            InitTextBoxes();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,38 +63,65 @@ namespace duel
             GameStatus.SetStatusInfo(status);
         }
 
-        private void InitDuelTextBox()
+        private void InitTextBoxes()
         {
-            DuelTextBoxs.Boxes = new List<TextBox>();
 
-            DuelTextBoxs.Boxes.Add(textBox1);
-            DuelTextBoxs.Boxes.Add(textBox2);
-            DuelTextBoxs.Boxes.Add(textBox3);
-            DuelTextBoxs.Boxes.Add(textBox4);
-            DuelTextBoxs.Boxes.Add(textBox5);
-            DuelTextBoxs.Boxes.Add(textBox6);
-            DuelTextBoxs.Boxes.Add(textBox7);
-            DuelTextBoxs.Boxes.Add(textBox8);
-            DuelTextBoxs.Boxes.Add(textBox9);
-            DuelTextBoxs.Boxes.Add(textBox10);
-            DuelTextBoxs.Boxes.Add(textBox11);
-            DuelTextBoxs.Boxes.Add(textBox12);
-            DuelTextBoxs.Boxes.Add(textBox13);
-            DuelTextBoxs.Boxes.Add(textBox14);
-            DuelTextBoxs.Boxes.Add(textBox15);
-            DuelTextBoxs.Boxes.Add(textBox16);
-            DuelTextBoxs.Boxes.Add(textBox17);
-            DuelTextBoxs.Boxes.Add(textBox18);
-            DuelTextBoxs.Boxes.Add(textBox19);
-            DuelTextBoxs.Boxes.Add(textBox20);
+            InitManagerBoxes();
+            InitDuelBoxes();
+            InitfactoryCardsAmountBoxes();
+            InitLifeBoxes();
 
-            DuelTextBoxs.Boxes.Add(Favtory1CardsAmountTextBox);
-            DuelTextBoxs.Boxes.Add(Favtory2CardsAmountTextBox);
-
-            DuelTextBoxs.Boxes.Add(playerLife1);
-            DuelTextBoxs.Boxes.Add(playerLife2);
         }
 
+        private void InitManagerBoxes()
+        {
+            DuelTextBoxs.managerBoxes = new List<TextBox>();
+
+            DuelTextBoxs.managerBoxes.Add(textBox1);
+            DuelTextBoxs.managerBoxes.Add(textBox2);
+            DuelTextBoxs.managerBoxes.Add(textBox3);
+            DuelTextBoxs.managerBoxes.Add(textBox4);
+            DuelTextBoxs.managerBoxes.Add(textBox5);
+
+            DuelTextBoxs.managerBoxes.Add(textBox16);
+            DuelTextBoxs.managerBoxes.Add(textBox17);
+            DuelTextBoxs.managerBoxes.Add(textBox18);
+            DuelTextBoxs.managerBoxes.Add(textBox19);
+            DuelTextBoxs.managerBoxes.Add(textBox20);
+        }
+
+        private void InitDuelBoxes()
+        {
+            DuelTextBoxs.duelBoxes = new List<TextBox>();
+
+            DuelTextBoxs.duelBoxes.Add(textBox6);
+            DuelTextBoxs.duelBoxes.Add(textBox7);
+            DuelTextBoxs.duelBoxes.Add(textBox8);
+            DuelTextBoxs.duelBoxes.Add(textBox9);
+            DuelTextBoxs.duelBoxes.Add(textBox10);
+
+            DuelTextBoxs.duelBoxes.Add(textBox11);
+            DuelTextBoxs.duelBoxes.Add(textBox12);
+            DuelTextBoxs.duelBoxes.Add(textBox13);
+            DuelTextBoxs.duelBoxes.Add(textBox14);
+            DuelTextBoxs.duelBoxes.Add(textBox15);
+        }
+
+        private void InitfactoryCardsAmountBoxes()
+        {
+            DuelTextBoxs.factoryCardsAmountBoxes = new List<TextBox>();
+
+            DuelTextBoxs.factoryCardsAmountBoxes.Add(Favtory1CardsAmountTextBox);
+            DuelTextBoxs.factoryCardsAmountBoxes.Add(Favtory2CardsAmountTextBox);
+        }
+
+        private void InitLifeBoxes()
+        {
+            DuelTextBoxs.lifeBoxes = new List<TextBox>();
+
+            DuelTextBoxs.lifeBoxes.Add(playerLife1);
+            DuelTextBoxs.lifeBoxes.Add(playerLife2);
+        }
 
         public void InitGame()
         {
@@ -366,9 +393,10 @@ namespace duel
                 {
                     duelGame.player2Life -= Convert.ToInt32(Game.recentDuelCardAttack.attack);
                 }
+
+                Game.recentDuelCardAttack.hasAttacked = true;
                 InitBeforeCard(ref Game.recentDuelCardAttack);
                 InitBeforeButton(beforeChosenToAttackButton);
-                Game.recentDuelCardAttack.hasAttacked = true;
 
                 ShowNewTable();
             }

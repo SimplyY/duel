@@ -27,15 +27,7 @@ namespace duel
 
         public void ShowCardsAmount()
         {
-            const string info = "剩余卡牌数：";
-            if (id == 1)
-            {
-                DuelTextBoxs.Boxes[20].Text = info + Convert.ToString(cards.Count);
-            }
-            else if (id == 2)
-            {
-                DuelTextBoxs.Boxes[21].Text = info + Convert.ToString(cards.Count);
-            }
+            DuelTextBoxs.ShowCardsAmount(cards, id);
         }
 
 

@@ -10,13 +10,17 @@ namespace duel
     {
         public static List<System.Windows.Forms.TextBox> Boxes;
 
-        public static void ShowTextBox(List<Card> cards, int boxesBeginIndex)
+        public static void ShowManagerBox(List<Card> cards, int boxesBeginIndex)
         {
             for (int i = 0; i < cards.Count; i++)
             {
                 DuelTextBoxs.Boxes[i + boxesBeginIndex].Text = cards[i].makeShowInfo();
                 DuelTextBoxs.Boxes[i + boxesBeginIndex].Height = 65;
             }
+        }
+
+        public static void ShowDuelBox(List<Card> cards, int boxesBeginIndex)
+        {
             for (int i = cards.Count; i < 5; i++)
             {
                 DuelTextBoxs.Boxes[i + boxesBeginIndex].Text = "";

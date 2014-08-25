@@ -20,9 +20,9 @@ namespace duel
             cards = new List<Card>();
         }
 
-        public void Show()
+        virtual public void Show()
         {
-            DuelTextBoxs.ShowTextBox(cards, theBeginIndexOfBoxes);
+            DuelTextBoxs.ShowManagerBox(cards, theBeginIndexOfBoxes);
         }
 
         public void PushACard(Card pushedCard)

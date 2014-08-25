@@ -8,7 +8,12 @@ namespace duel
 {
     public class CardsDuel : CardsManager
     {
-        public CardsDuel(int number, int theBeginIndexOfBoxes) :base(number ,theBeginIndexOfBoxes){}
+        public CardsDuel(int number) :base(number){}
+
+        override public void Show()
+        {
+            DuelTextBoxs.ShowDuelBox(cards, id);
+        }
 
         public void RemoveCard(ref Card removedCard)
         {

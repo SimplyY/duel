@@ -8,14 +8,14 @@ namespace duel
 {
     public class CardsManager
     {
-        public int number;
+        public int id;
         public int theBeginIndexOfBoxes { get; set; }
         public List<Card> cards { get; private set; }
 
         public CardsManager(){}
         public CardsManager(int number, int theBeginIndexOfBoxes)
         {
-            this.number = number;
+            this.id = number;
             this.theBeginIndexOfBoxes = theBeginIndexOfBoxes;
             cards = new List<Card>();
         }

@@ -75,52 +75,52 @@ namespace duel
 
         private void InitManagerBoxes()
         {
-            DuelTextBoxs.managerBoxes = new List<TextBox>();
+            DuelTextBoxes.managerBoxes = new List<TextBox>();
 
-            DuelTextBoxs.managerBoxes.Add(textBox1);
-            DuelTextBoxs.managerBoxes.Add(textBox2);
-            DuelTextBoxs.managerBoxes.Add(textBox3);
-            DuelTextBoxs.managerBoxes.Add(textBox4);
-            DuelTextBoxs.managerBoxes.Add(textBox5);
+            DuelTextBoxes.managerBoxes.Add(textBox1);
+            DuelTextBoxes.managerBoxes.Add(textBox2);
+            DuelTextBoxes.managerBoxes.Add(textBox3);
+            DuelTextBoxes.managerBoxes.Add(textBox4);
+            DuelTextBoxes.managerBoxes.Add(textBox5);
 
-            DuelTextBoxs.managerBoxes.Add(textBox16);
-            DuelTextBoxs.managerBoxes.Add(textBox17);
-            DuelTextBoxs.managerBoxes.Add(textBox18);
-            DuelTextBoxs.managerBoxes.Add(textBox19);
-            DuelTextBoxs.managerBoxes.Add(textBox20);
+            DuelTextBoxes.managerBoxes.Add(textBox16);
+            DuelTextBoxes.managerBoxes.Add(textBox17);
+            DuelTextBoxes.managerBoxes.Add(textBox18);
+            DuelTextBoxes.managerBoxes.Add(textBox19);
+            DuelTextBoxes.managerBoxes.Add(textBox20);
         }
 
         private void InitDuelBoxes()
         {
-            DuelTextBoxs.duelBoxes = new List<TextBox>();
+            DuelTextBoxes.duelBoxes = new List<TextBox>();
 
-            DuelTextBoxs.duelBoxes.Add(textBox6);
-            DuelTextBoxs.duelBoxes.Add(textBox7);
-            DuelTextBoxs.duelBoxes.Add(textBox8);
-            DuelTextBoxs.duelBoxes.Add(textBox9);
-            DuelTextBoxs.duelBoxes.Add(textBox10);
+            DuelTextBoxes.duelBoxes.Add(textBox6);
+            DuelTextBoxes.duelBoxes.Add(textBox7);
+            DuelTextBoxes.duelBoxes.Add(textBox8);
+            DuelTextBoxes.duelBoxes.Add(textBox9);
+            DuelTextBoxes.duelBoxes.Add(textBox10);
 
-            DuelTextBoxs.duelBoxes.Add(textBox11);
-            DuelTextBoxs.duelBoxes.Add(textBox12);
-            DuelTextBoxs.duelBoxes.Add(textBox13);
-            DuelTextBoxs.duelBoxes.Add(textBox14);
-            DuelTextBoxs.duelBoxes.Add(textBox15);
+            DuelTextBoxes.duelBoxes.Add(textBox11);
+            DuelTextBoxes.duelBoxes.Add(textBox12);
+            DuelTextBoxes.duelBoxes.Add(textBox13);
+            DuelTextBoxes.duelBoxes.Add(textBox14);
+            DuelTextBoxes.duelBoxes.Add(textBox15);
         }
 
         private void InitfactoryCardsAmountBoxes()
         {
-            DuelTextBoxs.factoryCardsAmountBoxes = new List<TextBox>();
+            DuelTextBoxes.factoryCardsAmountBoxes = new List<TextBox>();
 
-            DuelTextBoxs.factoryCardsAmountBoxes.Add(Favtory1CardsAmountTextBox);
-            DuelTextBoxs.factoryCardsAmountBoxes.Add(Favtory2CardsAmountTextBox);
+            DuelTextBoxes.factoryCardsAmountBoxes.Add(Favtory1CardsAmountTextBox);
+            DuelTextBoxes.factoryCardsAmountBoxes.Add(Favtory2CardsAmountTextBox);
         }
 
         private void InitLifeBoxes()
         {
-            DuelTextBoxs.lifeBoxes = new List<TextBox>();
+            DuelTextBoxes.lifeBoxes = new List<TextBox>();
 
-            DuelTextBoxs.lifeBoxes.Add(playerLife1);
-            DuelTextBoxs.lifeBoxes.Add(playerLife2);
+            DuelTextBoxes.lifeBoxes.Add(playerLife1);
+            DuelTextBoxes.lifeBoxes.Add(playerLife2);
         }
 
         public void InitGame()

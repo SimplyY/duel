@@ -12,7 +12,7 @@ namespace duel
 
         override public void Show()
         {
-            DuelTextBoxs.ShowDuel(cards, id);
+            DuelTextBoxes.ShowDuel(cards, id);
         }
 
         public void RemoveCard(ref Card removedCard)

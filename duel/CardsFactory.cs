@@ -27,7 +27,7 @@ namespace duel
 
         public void ShowCardsAmount()
         {
-            DuelTextBoxs.ShowCardsAmount(cards, id);
+            DuelTextBoxes.ShowCardsAmount(cards, id);
         }
 
 

@@ -150,7 +150,7 @@ namespace UnitTestProject1
         {
             for (int i = 0; i < cards.Count; i++)
             {
-                actualBoxesShowInfo += DuelTextBoxs.managerBoxes[i + boxesBeginIndex].Text;
+                actualBoxesShowInfo += DuelTextBoxes.managerBoxes[i + boxesBeginIndex].Text;
             }
         }
 

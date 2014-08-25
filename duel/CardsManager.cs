@@ -21,7 +21,7 @@ namespace duel
 
         virtual public void Show()
         {
-            DuelTextBoxs.ShowManager(cards, id);
+            DuelTextBoxes.ShowManager(cards, id);
         }
 
         public void PushACard(Card pushedCard)

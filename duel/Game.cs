@@ -69,7 +69,7 @@ namespace duel
 
         public void ShowPlayersLife()
         {
-            DuelTextBoxs.ShowPlayersLife(player1Life, player2Life);
+            DuelTextBoxes.ShowPlayersLife(player1Life, player2Life);
         }
 
         public bool IsGameOver()

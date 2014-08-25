@@ -88,7 +88,7 @@ namespace UnitTestProject1
             targetForm.InitGame();
             CardsFactory target = targetForm.duelGame.cardFactory1;
             target.ShowCardsAmount();
-            string actualCardsAmount = DuelTextBoxs.managerBoxes[20].Text;
+            string actualCardsAmount = DuelTextBoxes.managerBoxes[20].Text;
 
             Assert.AreEqual(expectedCardsAmount, actualCardsAmount);
         }

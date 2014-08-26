@@ -362,6 +362,7 @@ namespace duel
             {
                 cardDuel.cards[i].hasAttacked = false;
                 cardDuel.cards[i].hasBeenChosen = false;
+                cardDuel.cards[i].showInfo = "状态：" + cardDuel.cards[i].status + "\r\n";
             }
 
         }

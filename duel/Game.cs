@@ -10,6 +10,8 @@ namespace duel
     public class Game
     {
         public bool hasError;
+
+        //this variable is used to void the first times attack player
         public int timesAmount;
 
         public int speakPlayer { get; set; }

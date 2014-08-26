@@ -327,7 +327,6 @@ namespace duel
                 }
 
                 InitBeforeButton(beforeChosenToAttackButton);
-                InitBeforeCard(ref Game.recentDuelCardAttack);
 
                 ShowNewTable();
             }
@@ -397,7 +396,6 @@ namespace duel
                 }
 
                 Game.recentDuelCardAttack.hasAttacked = true;
-                InitBeforeCard(ref Game.recentDuelCardAttack);
                 InitBeforeButton(beforeChosenToAttackButton);
 
                 ShowNewTable();

@@ -25,52 +25,13 @@ namespace duel
             InitTextBoxes();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public void ShowNewTable()
-        {
-            duelGame.ShowPlayersLife();
-            duelGame.cardFactory1.ShowCardsAmount();
-            duelGame.cardFactory2.ShowCardsAmount();
-            duelGame.cardManager1.Show();
-            duelGame.cardManager2.Show();
-            duelGame.cardDuel1.Show();
-            duelGame.cardDuel2.Show();
-        }
-
-        public void timer1_Tick(object sender, EventArgs e)
-        {
-            if (duelGame.IsGameOver() || duelGame.hasError)
-            {
-                GameStatus.ShowGameStatus(showStatusBox);
-                gameHasStarted = false;
-
-                startGameButton.Text = "点击重新开始";
-            }
-            else
-            {
-                SetStatusBox();
-                GameStatus.ShowGameStatus(showStatusBox);
-            }
-        }
-
-        private void SetStatusBox()
-        {
-            string status = "玩家" + Convert.ToString(duelGame.speakPlayer) + "的回合";
-            GameStatus.SetStatusInfo(status);
-        }
-
+        //InitTextBoxes
         private void InitTextBoxes()
         {
-
             InitManagerBoxes();
             InitDuelBoxes();
             InitfactoryCardsAmountBoxes();
             InitLifeBoxes();
-
         }
 
         private void InitManagerBoxes()
@@ -123,17 +84,48 @@ namespace duel
             DuelTextBoxes.lifeBoxes.Add(playerLife2);
         }
 
-        public void InitGame()
-        {
-            timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
-            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
 
-            duelGame = new Game();
-            gameHasStarted = true;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
+        //show textBoxes
+        public void ShowNewTable()
+        {
+            duelGame.ShowPlayersLife();
+            duelGame.cardFactory1.ShowCardsAmount();
+            duelGame.cardFactory2.ShowCardsAmount();
+            duelGame.cardManager1.Show();
+            duelGame.cardManager2.Show();
+            duelGame.cardDuel1.Show();
+            duelGame.cardDuel2.Show();
+        }
 
-        private void StartGame(object sender, EventArgs e)
+        public void timer1_Tick(object sender, EventArgs e)
+        {
+            if (duelGame.IsGameOver() || duelGame.hasError)
+            {
+                GameStatus.ShowGameStatus(showStatusBox);
+                gameHasStarted = false;
+
+                startGameButton.Text = "点击重新开始";
+            }
+            else
+            {
+                SetStatusBox();
+                GameStatus.ShowGameStatus(showStatusBox);
+            }
+        }
+
+        private void SetStatusBox()
+        {
+            string status = "玩家" + Convert.ToString(duelGame.speakPlayer) + "的回合";
+            GameStatus.SetStatusInfo(status);
+        }
+
+        //click the button to start Game
+        private void StartGame_Click(object sender, EventArgs e)
         {
             if (gameHasStarted == false)
             {
@@ -145,6 +137,16 @@ namespace duel
             }
         }
 
+        public void InitGame()
+        {
+            timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
+            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
+
+            duelGame = new Game();
+            gameHasStarted = true;
+        }
+
+        //pick card
         private void player1PickACard_Click(object sender, EventArgs e)
         {
             if (gameHasStarted == true)
@@ -163,27 +165,23 @@ namespace duel
             }
         }
 
+        //send card
         private void SendToDuel1_Click(object sender, EventArgs e)
         {
-            if (gameHasStarted == true)
-            {
-                Button button = (Button)sender;
-                int tag = Convert.ToInt32(button.Tag);
-                int duelNumber = 1;
-                int cardIndex = getIndexFromTag(tag, duelNumber);
-                duelGame.SendACardToDuel(cardIndex, duelNumber);
-
-                ShowNewTable();
-            }
+            SentACardToDuel(sender, 1);
         }
 
         private void SendToDuel2_Click(object sender, EventArgs e)
         {
+            SentACardToDuel(sender, 2);
+        }
+
+        private void SentACardToDuel(object sender, int duelNumber)
+        {
             if (gameHasStarted == true)
             {
                 Button button = (Button)sender;
                 int tag = Convert.ToInt32(button.Tag);
-                int duelNumber = 2;
                 int cardIndex = getIndexFromTag(tag, duelNumber);
                 duelGame.SendACardToDuel(cardIndex, duelNumber);
 
@@ -191,6 +189,7 @@ namespace duel
             }
         }
 
+        //tag is inited by a special way that has connection with index
         private int getIndexFromTag(int tag, int duelNumber)
         {
             if (duelNumber == 1 && tag >= 1 && tag <= 5)
@@ -204,6 +203,7 @@ namespace duel
             return -1;
         }
 
+        //chooseDuelButton
         private void DuelButton1_Click(object sender, EventArgs e)
         {
             if (gameHasStarted == true)

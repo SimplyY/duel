@@ -601,7 +601,7 @@
             this.startGameButton.TabIndex = 56;
             this.startGameButton.Text = "开始游戏";
             this.startGameButton.UseVisualStyleBackColor = true;
-            this.startGameButton.Click += new System.EventHandler(this.StartGame);
+            this.startGameButton.Click += new System.EventHandler(this.StartGame_Click);
             // 
             // toBeDenfend
             // 

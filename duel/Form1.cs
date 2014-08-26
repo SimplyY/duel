@@ -102,6 +102,7 @@ namespace duel
             duelGame.cardDuel2.Show();
         }
 
+        //period function
         public void timer1_Tick(object sender, EventArgs e)
         {
             if (duelGame.IsGameOver() || duelGame.hasError)
@@ -139,8 +140,8 @@ namespace duel
 
         public void InitGame()
         {
-            timer1.Enabled = true; //设置为truetimer1_Tick实践就会执行，开始计时
-            timer1.Interval = 200; //设置timer1的timer1_Tick实践执行周期
+            timer1.Enabled = true; 
+            timer1.Interval = 200; 
 
             duelGame = new Game();
             gameHasStarted = true;
@@ -212,9 +213,7 @@ namespace duel
                 Button button = (Button)sender;
                 if (duelGame.speakPlayer == 1)
                 {
-                    
                     ChooseTheFirstCard(theCardDuel, button);
-                    
                 }
                 else if (duelGame.speakPlayer == 2 && Game.recentDuelCardAttack != null)
                 {
@@ -287,15 +286,7 @@ namespace duel
             }
         }
 
-        private void InitBeforeCard(ref Card beforeCard)
-        {
-            if (beforeCard != null)
-            {
-                beforeCard.hasAttacked = false;
-                beforeCard.hasBeenChosen = false;
-            }
-            beforeCard = null;
-        }
+
 
         private void ChangeState_Click(object sender, EventArgs e)
         {
@@ -330,6 +321,16 @@ namespace duel
 
                 ShowNewTable();
             }
+        }
+
+        private void InitBeforeCard(ref Card beforeCard)
+        {
+            if (beforeCard != null)
+            {
+                beforeCard.hasAttacked = false;
+                beforeCard.hasBeenChosen = false;
+            }
+            beforeCard = null;
         }
 
         private void InitDuelCard(Game duelGame)

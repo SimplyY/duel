@@ -329,7 +329,6 @@ namespace duel
                 InitBeforeButton(beforeChosenToAttackButton);
                 InitBeforeCard(ref Game.recentDuelCardAttack);
 
-                ++duelGame.timesAmount;
                 ShowNewTable();
             }
         }
@@ -344,6 +343,9 @@ namespace duel
                 InitDuelCard(duelGame);
                 InitBeforeButton(beforeChosenToAttackButton);
                 InitBeforeButton(beforeChosenToAttackedButton);
+                ++duelGame.timesAmount;
+
+                ShowNewTable();
             }
         }
 
@@ -362,7 +364,6 @@ namespace duel
             {
                 cardDuel.cards[i].hasAttacked = false;
                 cardDuel.cards[i].hasBeenChosen = false;
-                cardDuel.cards[i].showInfo = "状态：" + cardDuel.cards[i].status + "\r\n";
             }
 
         }

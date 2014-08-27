@@ -22,6 +22,16 @@ TODO
 
 Write a summary about creating these code for "duel manster".
 
+Framework
+---
+1. Form1
+2. Game
+3. Card
+4. CardFactory
+5. CardManager
+6. CardDuel
+7. DuelTextBoxes
+8. GameStatus
 
 
 

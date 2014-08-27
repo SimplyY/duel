@@ -717,7 +717,7 @@
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("宋体", 9F);
             this.Name = "Form1";
-            this.Text = "Duel";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

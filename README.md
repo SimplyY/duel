@@ -27,15 +27,18 @@ TODO
 Write a summary about creating these code for "duel manster".
 
 Framework
+===
+----
+classes：
 ---
-1. Form1
-2. Game
-3. Card
-4. CardFactory
-5. CardManager
-6. CardDuel
-7. DuelTextBoxes
-8. GameStatus
+1. Form1:control game ui
+2. Game:control game rule:pick cards,send cards,duel cards
+3. Card:cards' attibute and showCardInfo function
+4. CardFactory:produce cards by reading infofile ,ShowCardsAmount,pop card
+5. CardManager:manage cards:pop,send,push
+6. CardDuel:remove function,else extend CardManger
+7. DuelTextBoxes：show cards' info
+8. GameStatus:show game's info
 
 
 
